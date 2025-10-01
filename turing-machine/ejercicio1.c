@@ -2,7 +2,7 @@
 
 int main() {
 
-    // Recibe cadenas del tipo 0*1*
+    // Recibe cadenas del tipo 0n1n
 
     char cinta[] = "0011"; // La cadena a leer
     char estado = '0'; // Los estados pueden ser 0, 1, 2 y 3
