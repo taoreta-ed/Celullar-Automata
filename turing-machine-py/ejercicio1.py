@@ -39,7 +39,7 @@ def maquina_turing():
             elif cinta[i] == '1':
                 estado = '2'
                 cinta[i] = 'Y'
-                i+=1
+                i-=1
             elif cinta[i] == 'Y':
                 estado = '1'
                 cinta[i] == 'Y'
@@ -70,15 +70,14 @@ def maquina_turing():
         #Para el estado 3
         elif estado == '3':
             print("Estado 3: ")
-            if cinta[i] == 'Y':
-                estado = '3'
-                cinta[i] = 'Y'
-                i+=1
-            elif cinta[i] == '\n':
+            if i == len(cinta):
                 estado = '4'
                 print(cinta)
                 print("Estado 4: Estado de aceptación")
-
+            elif cinta[i] == 'Y':
+                estado = '3'
+                cinta[i] = 'Y'
+                i+=1
             else:
                 print("Cadena no válida")
                 break
