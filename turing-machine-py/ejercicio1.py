@@ -1,10 +1,24 @@
-from os import *
-from sys import *
+#from os import *
+#from sys import *
+#import sys
 #from collections import deque #para cintas más grandes
 
-def maquina_turing():
+def maquina_turing(archivo_entrada = "entrada.txt"):
     #cinta = "0011" #list() #La cadena a leer
-    cinta = ['0', '0', '1', '1']
+    #cinta = ['0', '0', '1', '1']
+    
+    #La cinta la obtenemos de un archivo
+    try:
+        with open(archivo_entrada, 'r') as archivo:
+            #Lee la primer línea y quita espacios y saltos de linea
+            cadena_entrada = archivo.readline().strip()
+
+            #Convierte la cadena en un arreglo de chars
+            cinta = list(cadena_entrada)
+    except FileNotFoundError:
+        print(f"Error: El archivo de entrada {archivo_entrada} no se encontró")
+        return
+
     estado = '0' #Los estados pueden ser 0, 1, 2 y 3
 
     #Vamos a tener diferentes condiciones dependiendo del estado y el simbolo a leer
