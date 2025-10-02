@@ -3,6 +3,12 @@
 #import sys
 #from collections import deque #para cintas más grandes
 
+#importaciones para la animación
+import tkinter as tk
+from tkinter import ttk
+import time
+
+
 def maquina_turing(archivo_entrada = "entrada.txt", archivo_salida = "salida.txt"):
     #cinta = "0011" #list() #La cadena a leer
     #cinta = ['0', '0', '1', '1']
@@ -130,4 +136,30 @@ def maquina_turing(archivo_entrada = "entrada.txt", archivo_salida = "salida.txt
     except Exception as e:
         print("Ocurró un error al escribir o durante la simulación: " + e)
 
+
+#Función para la animación
+def visualizar_turing(archivo_salida = "salida.txt"):
+    try:
+        #Leemos el archivo de log
+        with open(archivo_salida, 'r') as archivo:
+            log_lines = archivo.readlines()
+
+            #Ignoramos el encabezado
+            pasos = [line.strip() for line in log_lines[1:] if line.strip()] #and not line.startswith("RECHAZO") and not line.startswith("Aceptación")]
+    except FileNotFoundError:
+        print(f"El archivo de log {archivo_salida} no se encontró.")
+        return
+    
+    #Iniciamos la ventana principal de Tkinter
+    ventana = tk.Tk()
+    ventana.title("Máquina de Turing")
+
+    #Componentes de la interfaz
+
+    cinta_frame = ttk.Frame(root, relief = tk.RIDGE, borderwidth=2)
+    cinta_frame.pack(padx = 10, pady = 20)
+
+    
+
 maquina_turing()
+
