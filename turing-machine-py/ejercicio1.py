@@ -89,7 +89,7 @@ def maquina_turing(archivo_entrada = "entrada.txt", archivo_salida = "salida.txt
                         i-=1
                     elif simbolo_leido == 'Y':
                         estado = '1'
-                        cinta[i] == 'Y'
+                        cinta[i] = 'Y'
                         i+=1
                     else:
                         print("Cadena no válida")
@@ -153,15 +153,26 @@ def visualizar_turing(archivo_salida = "salida.txt"):
     #Iniciamos la ventana principal de Tkinter
     root = tk.Tk()
     root.title("Máquina de Turing")
+    root.configure(bg='#282c34') #Fondo oscuro
+
+    #Estilo moderno
+    style = ttk.Style()
+    style.theme_use('clam')
+    style.configure('TLabel', background='#282c34', foreground='#61dafb', font=('Consolas', 12))
+    style.configure('TButton', font=("Consolas", 12, "bold"), padding=10)
+    
 
     #Componentes de la interfaz
+    #Título
+    ttk.Label(root, text="Máquina de Turing", font=("Consolas", 18, "bold"), foreground='#FFFFFF').pack(pady=15)
+
     ##Marco o frame para la cinta
-    cinta_frame = ttk.Frame(root, relief = tk.RIDGE, borderwidth=2)
+    cinta_frame = ttk.Frame(root, relief = tk.RAISED, borderwidth=4, style="TFrame")
     cinta_frame.pack(padx = 10, pady = 20)
 
     #Etiqueta para el estado actual
     estado_var = tk.StringVar(root, value="Estado: 0")
-    ttk.Label(root, textvariable=estado_var, font=("Consolas", 14, "bold")).pack(pady=5)
+    ttk.Label(root, textvariable=estado_var, font=("Consolas", 14, "bold"), foreground="#a9f30b").pack(pady=5)
 
     #Etiqueta para el paso actual
     paso_var = tk.StringVar(root, value="Paso: 00")
@@ -178,24 +189,28 @@ def visualizar_turing(archivo_salida = "salida.txt"):
         #Limpiar frame anterior
         for widget in cinta_frame.winfo_children():
             widget.destroy()
-        cinta_labels = []
+        
 
         #Recorrer la cadena de la cinta y dibujar la celda
         for index, symbol in enumerate(cinta_str):
-            bg_color = 'red' #Color para el cabezal
-            fg_color = 'white' 
+            bg_color = '#3c3f41' #Color para el cabezal
+            fg_color = '#FFFFFF' 
 
-        #Crear y posicionar la etiqueta de la celda
-        label = ttk.Label(
-            cinta_frame,
-            text=symbol,
-            background=bg_color,
-            foreground=fg_color,
-            font=('Consolas', 16, 'bold'),
-            padding=(10, 5)
-        )
-        label.grid(row=0, column=index, padx=1, pady=1)
-        cinta_labels.append(label)
+            if index == cabezal_pos:
+                bg_color = '#e06c75'
+                fg_color = '#FFFFFF'
+
+            #Crear y posicionar la etiqueta de la celda
+            label = ttk.Label(
+                cinta_frame,
+                text=symbol,
+                background=bg_color,
+                foreground=fg_color,
+                font=('Consolas', 18, 'bold'),
+                padding=(10, 5)
+            )
+            label.grid(row=0, column=index, padx=1, pady=1)
+            cinta_labels.append(label)
 
     #Funcion de Animación (Iterador)
 
