@@ -347,12 +347,77 @@ class GameOfLifeApp:
     # --- Manejo Gráfico (Canvas) ---
 
     def update_canvas(self):
+        # Crear imagen RGB desde la matriz numpy
+        # R = Patrón, G = Vivas, B = 0
         h, w = self.grid.shape
         img_array = np.zeros((h, w, 3), dtype=np.uint8)
-        img_array[self.grid == 1] = self.color_alive
 
+        # 1. Pintar todas las células vivas de Lila [200, 160, 255]
+        # Usamos máscaras booleanas para asignar el color
+        mask_alive = (self.grid == 1)
+        img_array[mask_alive] = self.color_alive
+
+        # 2. Identificación de Patrones (Gliders)
+        # Solo buscamos si la opción está activada y hay células
+        if self.show_patterns and self.generation > 0:
+            # Definir la forma del Glider (fase principal viajando sureste)
+            # . * .
+            # . . *
+            # * * *
+            # Buscamos coincidencias exactas usando slicing de numpy
+            # Esto es MUCHO más rápido que bucles for
+            
+            # Recortes de la grid desplazados para comprobar vecinos relativos
+            # Posiciones relativas donde debe haber un 1: (0,1), (1,2), (2,0), (2,1), (2,2)
+            
+            # Aseguramos no salirnos de rango recortando los bordes
+            # Grid base (0,0) hasta (H-2, W-2)
+            g = self.grid
+            
+            # Construimos una máscara donde se cumpla la condición del Glider
+            # Usamos lógica AND (&) bit a bit
+            try:
+                # Top-Middle (0,1)
+                c1 = g[:-2, 1:-1] == 1
+                # Middle-Right (1,2)
+                c2 = g[1:-1, 2:] == 1
+                # Bottom-Left (2,0)
+                c3 = g[2:, :-2] == 1
+                # Bottom-Middle (2,1)
+                c4 = g[2:, 1:-1] == 1
+                # Bottom-Right (2,2)
+                c5 = g[2:, 2:] == 1
+                
+                # Células que deben estar muertas para que sea un glider limpio (opcional, pero mejora precisión)
+                # Top-Left, Top-Right, Middle-Left, Middle-Middle
+                e1 = g[:-2, :-2] == 0
+                e2 = g[:-2, 2:] == 0
+                e3 = g[1:-1, :-2] == 0
+                e4 = g[1:-1, 1:-1] == 0
+
+                # Encontrar dónde coinciden TODAS las condiciones
+                glider_matches = c1 & c2 & c3 & c4 & c5 & e1 & e2 & e3 & e4
+                
+                # glider_matches es una matriz True/False del tamaño reducido (h-2, w-2)
+                # Necesitamos pintar los pixeles correspondientes en la imagen original
+                
+                # Obtenemos las coordenadas de los gliders encontrados
+                y_idxs, x_idxs = np.where(glider_matches)
+                
+                # Pintar de ROJO [255, 0, 0] las 5 células de cada glider encontrado
+                for y, x in zip(y_idxs, x_idxs):
+                    # Coordenadas relativas al match
+                    points = [(y, x+1), (y+1, x+2), (y+2, x), (y+2, x+1), (y+2, x+2)]
+                    for py, px in points:
+                        img_array[py, px] = self.color_pattern
+            
+            except Exception:
+                pass # Evitar crash si la matriz es muy pequeña (<3x3)
+
+        # Crear imagen PIL
         pil_image = Image.fromarray(img_array, mode='RGB')
         
+        # Escalar según Zoom
         new_w = int(w * self.cell_size)
         new_h = int(h * self.cell_size)
         
@@ -360,6 +425,7 @@ class GameOfLifeApp:
         
         self.tk_image = ImageTk.PhotoImage(pil_image)
 
+        # Configurar región de scroll
         self.canvas.config(scrollregion=(0, 0, new_w, new_h))
         self.canvas.create_image(0, 0, anchor=tk.NW, image=self.tk_image)
 
