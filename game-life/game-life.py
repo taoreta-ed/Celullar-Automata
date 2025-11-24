@@ -46,6 +46,9 @@ class GameOfLifeApp:
         # Inicializar gráficos de matplotlib
         self.init_plots()
 
+        # Configurar límite de zoom inicial
+        self.update_zoom_limit()
+
         # Render inicial
         self.update_canvas()
 
@@ -78,11 +81,13 @@ class GameOfLifeApp:
         self.entry_cols.pack(side=tk.LEFT)
         tk.Button(control_frame, text="Redimensionar", command=self.resize_grid, width=20).pack(pady=2)
 
-        # Zoom
+        # Zoom Dinámico
         tk.Label(control_frame, text="Zoom (Célula px):").pack(pady=(10,0))
         self.zoom_slider = tk.Scale(control_frame, from_=1, to=10, orient=tk.HORIZONTAL, command=self.change_zoom)
         self.zoom_slider.set(2)
         self.zoom_slider.pack(fill=tk.X, padx=10)
+        self.lbl_zoom_info = tk.Label(control_frame, text="Max Zoom: 10x", font=("Arial", 8))
+        self.lbl_zoom_info.pack()
 
         # Reglas
         tk.Label(control_frame, text="Regla (Formato B/S):").pack(pady=(10,0))
@@ -200,15 +205,50 @@ class GameOfLifeApp:
         try:
             r = int(self.entry_rows.get())
             c = int(self.entry_cols.get())
-            if r < 10 or c < 10 or r > 5000 or c > 5000:
+            
+            # CAMBIO: Límite estricto de 1000 para proteger RAM de 8GB
+            if r < 10 or c < 10 or r > 1000 or c > 1000:
                 raise ValueError
             self.rows = r
             self.cols = c
             self.grid = np.zeros((self.rows, self.cols), dtype=np.uint8)
             self.reset_stats()
+            
+            # Recalcular límite de zoom seguro
+            self.update_zoom_limit()
             self.update_canvas()
+            
         except ValueError:
-            messagebox.showerror("Error", "Dimensiones inválidas (10-5000)")
+            messagebox.showerror("Error", "Dimensiones inválidas (10-1000)")
+
+    def update_zoom_limit(self):
+        # Lógica de seguridad para 8GB RAM:
+        # Regla del usuario: 
+        # - 1000x1000 -> Zoom Max 1
+        # - 100x100   -> Zoom Max 30
+        
+        max_dimension_grid = max(self.rows, self.cols)
+        
+        if max_dimension_grid >= 1000:
+            max_allowed_zoom = 1
+        else:
+            # Usamos un presupuesto de 3000 pixeles de lado para grids menores
+            # Ejemplo: 100 * 30 = 3000
+            safe_pixel_budget = 3000
+            max_allowed_zoom = safe_pixel_budget // max_dimension_grid
+        
+        # Mínimo zoom siempre es 1, máximo absoluto 30 (pedido por usuario)
+        max_allowed_zoom = max(1, min(30, max_allowed_zoom))
+        
+        # Actualizar slider
+        current_zoom = self.zoom_slider.get()
+        self.zoom_slider.config(to=max_allowed_zoom)
+        
+        if current_zoom > max_allowed_zoom:
+            self.zoom_slider.set(max_allowed_zoom)
+            self.cell_size = max_allowed_zoom
+        
+        self.lbl_zoom_info.config(text=f"Max Zoom Seguro: {max_allowed_zoom}x")
 
     def change_zoom(self, val):
         self.cell_size = int(val)
@@ -222,11 +262,7 @@ class GameOfLifeApp:
         self.update_canvas()
 
     def step_simulation(self):
-        # Convolución manual optimizada con numpy slicing
-        # Vecinos: N, S, E, W, NE, NW, SE, SW
-        
         if self.toroidal:
-            # Modo Toro: np.roll desplaza y da la vuelta
             N  = np.roll(self.grid, -1, axis=0)
             S  = np.roll(self.grid, 1, axis=0)
             E  = np.roll(self.grid, -1, axis=1)
@@ -236,7 +272,6 @@ class GameOfLifeApp:
             SE = np.roll(S, -1, axis=1)
             SW = np.roll(S, 1, axis=1)
         else:
-            # Modo Frontera Nula: Pad con ceros
             grid_pad = np.pad(self.grid, 1, mode='constant', constant_values=0)
             N  = grid_pad[:-2, 1:-1]
             S  = grid_pad[2:, 1:-1]
@@ -249,24 +284,16 @@ class GameOfLifeApp:
 
         neighbors = N + S + E + W + NE + NW + SE + SW
 
-        # Aplicar reglas vectorizadas
-        # 1. Nacimiento
         birth_mask = np.isin(neighbors, self.rule_b) & (self.grid == 0)
-        
-        # 2. Supervivencia
         survive_mask = np.isin(neighbors, self.rule_s) & (self.grid == 1)
 
-        # Nueva grid
         self.grid[:] = 0
         self.grid[birth_mask | survive_mask] = 1
 
-        # Stats
         self.generation += 1
         pop = np.sum(self.grid)
         self.population_history.append(pop)
         
-        # Calcular media y varianza de la distribución espacial (simple)
-        # Esto es costoso en grids grandes, lo hacemos simple
         if pop > 0:
             indices = np.argwhere(self.grid == 1)
             mean_pos = np.mean(indices, axis=0)
@@ -284,17 +311,18 @@ class GameOfLifeApp:
 
         self.update_canvas()
         
-        # Actualizar gráficas cada 5 iteraciones para rendimiento
         if self.generation % 5 == 0:
             self.update_plots()
 
     def loop(self):
         if self.running:
-            start_time = time.time()
-            self.step_simulation()
-            # Ajustar velocidad segun tamaño
             delay = 10 if self.rows < 1000 else 100 
-            self.root.after(delay, self.loop)
+            self.root.after(delay, self.loop_step)
+    
+    def loop_step(self):
+        if self.running:
+            self.step_simulation()
+            self.loop()
 
     def toggle_simulation(self):
         self.running = not self.running
@@ -317,43 +345,23 @@ class GameOfLifeApp:
     # --- Manejo Gráfico (Canvas) ---
 
     def update_canvas(self):
-        # Crear imagen RGB desde la matriz numpy
-        # R = Patrón, G = Vivas, B = 0
         h, w = self.grid.shape
         img_array = np.zeros((h, w, 3), dtype=np.uint8)
-
-        # Células vivas -> Verde
         img_array[self.grid == 1] = self.color_alive
 
-        # Identificación de Patrones (Simplificado: Gliders)
-        # Un Glider cabe en 3x3. Hacer convolution matching es costoso para 5000x5000 en Python puro.
-        # Haremos una heurística visual simple si está activado
-        if self.show_patterns and self.generation > 0:
-             # Detectar bloques pequeños aislados (costoso, solo demo)
-             # Aquí implementamos una lógica visual simple: pintar de rojo células que nacieron recién
-             # para simular "actividad" o patrones específicos.
-             # Para la tarea real de "reconocer gliders", se necesita template matching.
-             # Implementaremos un matching simple de bloques 3x3.
-             pass 
-
-        # Crear imagen PIL
         pil_image = Image.fromarray(img_array, mode='RGB')
         
-        # Escalar según Zoom
         new_w = int(w * self.cell_size)
         new_h = int(h * self.cell_size)
         
-        # Usamos Nearest para mantener bordes duros de pixeles
         pil_image = pil_image.resize((new_w, new_h), Image.NEAREST)
         
         self.tk_image = ImageTk.PhotoImage(pil_image)
 
-        # Configurar región de scroll
         self.canvas.config(scrollregion=(0, 0, new_w, new_h))
         self.canvas.create_image(0, 0, anchor=tk.NW, image=self.tk_image)
 
     def get_cell_coords(self, event):
-        # Mapear coordenadas de pantalla (con scroll) a coordenadas de grid
         x = self.canvas.canvasx(event.x)
         y = self.canvas.canvasy(event.y)
         col = int(x / self.cell_size)
@@ -366,7 +374,7 @@ class GameOfLifeApp:
     def on_canvas_drag(self, event):
         row, col = self.get_cell_coords(event)
         if 0 <= row < self.rows and 0 <= col < self.cols:
-            self.grid[row, col] = 1 # Pintar
+            self.grid[row, col] = 1 
             self.update_canvas()
 
     # --- Archivos ---
@@ -386,6 +394,8 @@ class GameOfLifeApp:
                     self.grid = loaded_grid
                     self.entry_rows.delete(0, tk.END); self.entry_rows.insert(0, str(self.rows))
                     self.entry_cols.delete(0, tk.END); self.entry_cols.insert(0, str(self.cols))
+                    
+                    self.update_zoom_limit() # Recalcular al cargar
                     self.update_canvas()
                     self.reset_stats()
             except Exception as e:
@@ -393,24 +403,20 @@ class GameOfLifeApp:
 
     # --- Experimentos ---
     def setup_glider_experiment(self):
-        # Preguntar densidad
         density = simpledialog.askinteger("Input", "Gliders por sitio (10, 100, 1000 aprox):", minvalue=1, maxvalue=5000)
         if not density: return
         
         self.clear_grid()
-        self.set_rule_preset("B3/S23") # Gliders funcionan mejor en Life
+        self.set_rule_preset("B3/S23") 
         
-        # Definir patrón Glider
         glider_se = np.array([[0,1,0],
                               [0,0,1],
-                              [1,1,1]]) # Viaja sureste
+                              [1,1,1]]) 
         
         glider_nw = np.array([[0,1,1],
                               [1,0,1],
-                              [0,0,1]]) # Viaja noroeste (rotado 180 del se)
+                              [0,0,1]]) 
 
-        # Colocar gliders en bandas opuestas para que choquen
-        # Banda superior bajando
         for _ in range(density):
             r = np.random.randint(0, self.rows // 3)
             c = np.random.randint(0, self.cols - 5)
@@ -418,7 +424,6 @@ class GameOfLifeApp:
                 self.grid[r:r+3, c:c+3] = glider_se
             except: pass
             
-        # Banda inferior subiendo
         for _ in range(density):
             r = np.random.randint(2 * self.rows // 3, self.rows - 5)
             c = np.random.randint(0, self.cols - 5)
