@@ -27,9 +27,9 @@ class GameOfLifeApp:
         self.rule_s = [2, 3]
 
         # Colores (R, G, B)
-        self.color_dead = [0, 0, 0]      # Negro
-        self.color_alive = [0, 255, 0]   # Verde
-        self.color_pattern = [255, 0, 0] # Rojo (para patrones detectados)
+        self.color_dead = [0, 0, 0]        # Negro
+        self.color_alive = [200, 160, 255] # Lila
+        self.color_pattern = [255, 0, 0]   # Rojo (para patrones detectados)
 
         # Estadísticas
         self.generation = 0
@@ -224,17 +224,19 @@ class GameOfLifeApp:
     def update_zoom_limit(self):
         # Lógica de seguridad para 8GB RAM:
         # Regla del usuario: 
-        # - 1000x1000 -> Zoom Max 1
+        # - 1000x1000 -> Zoom Max 3
         # - 100x100   -> Zoom Max 30
         
         max_dimension_grid = max(self.rows, self.cols)
         
-        if max_dimension_grid >= 1000:
+        # Usamos un presupuesto de 3000 pixeles de lado
+        # 3000 / 1000 = 3x
+        # 3000 / 100 = 30x
+        safe_pixel_budget = 3000
+        
+        if max_dimension_grid == 0: 
             max_allowed_zoom = 1
         else:
-            # Usamos un presupuesto de 3000 pixeles de lado para grids menores
-            # Ejemplo: 100 * 30 = 3000
-            safe_pixel_budget = 3000
             max_allowed_zoom = safe_pixel_budget // max_dimension_grid
         
         # Mínimo zoom siempre es 1, máximo absoluto 30 (pedido por usuario)
