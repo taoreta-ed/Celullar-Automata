@@ -471,7 +471,7 @@ class GameOfLifeApp:
 
     # --- Experimentos ---
     def setup_glider_experiment(self):
-        density = simpledialog.askinteger("Input", "Gliders por sitio (10, 100, 1000 aprox):", minvalue=1, maxvalue=5000)
+        density = simpledialog.askinteger("Input", "Gliders por sitio (10, 100, 1000 aprox):", minvalue=1, maxvalue=1000)
         if not density: return
         
         self.clear_grid()
