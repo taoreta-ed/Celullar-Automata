@@ -20,16 +20,23 @@ class GameOfLifeApp:
         self.zoom_level = 1.0
         self.running = False
         self.toroidal = False # False = Frontera Nula, True = Toro
-        self.show_patterns = False
+        self.show_patterns = False # Ahora activa el modo "Visualizar Edad"
         
         # Reglas (Default Conway: B3/S23)
         self.rule_b = [3]
         self.rule_s = [2, 3]
 
-        # Colores (R, G, B)
+        # --- PALETA DE COLORES (Lilas) ---
         self.color_dead = [0, 0, 0]        # Negro
-        self.color_alive = [200, 160, 255] # Lila
-        self.color_pattern = [255, 0, 0]   # Rojo (para patrones detectados)
+        
+        # Edad 1: Recién nacida (Oscuro)
+        self.color_age_1 = [140, 80, 180]  
+        # Edad 2: Sobreviviente (El Lila original)
+        self.color_age_2 = [200, 160, 255] 
+        # Edad 3+: Estable/Veterana (Brillante/Blanco)
+        self.color_age_3 = [250, 230, 255]
+
+        self.color_pattern = [255, 0, 0] # Rojo (Legacy o alertas)
 
         # Estadísticas
         self.generation = 0
@@ -86,7 +93,7 @@ class GameOfLifeApp:
         self.zoom_slider = tk.Scale(control_frame, from_=1, to=10, orient=tk.HORIZONTAL, command=self.change_zoom)
         self.zoom_slider.set(2)
         self.zoom_slider.pack(fill=tk.X, padx=10)
-        self.lbl_zoom_info = tk.Label(control_frame, text="Max Zoom: 10x", font=("Arial", 8))
+        self.lbl_zoom_info = tk.Label(control_frame, text="Max Zoom: --", font=("Arial", 8))
         self.lbl_zoom_info.pack()
 
         # Reglas
@@ -104,10 +111,6 @@ class GameOfLifeApp:
         # Frontera
         self.toroidal_var = tk.BooleanVar(value=False)
         tk.Checkbutton(control_frame, text="Frontera Toro (Toroidal)", variable=self.toroidal_var, command=self.toggle_boundary).pack(pady=5)
-
-        # Identificación de Patrones
-        self.pattern_var = tk.BooleanVar(value=False)
-        tk.Checkbutton(control_frame, text="Identificar Gliders", variable=self.pattern_var, command=self.toggle_patterns).pack(pady=5)
 
         # Archivos
         tk.Label(control_frame, text="Archivos:").pack(pady=(10,0))
@@ -206,8 +209,8 @@ class GameOfLifeApp:
             r = int(self.entry_rows.get())
             c = int(self.entry_cols.get())
             
-            # CAMBIO: Límite estricto de 1000 para proteger RAM de 8GB
-            if r < 10 or c < 10 or r > 1000 or c > 1000:
+            # CAMBIO: Límite entre 50 y 1000
+            if r < 50 or c < 50 or r > 1000 or c > 1000:
                 raise ValueError
             self.rows = r
             self.cols = c
@@ -219,28 +222,26 @@ class GameOfLifeApp:
             self.update_canvas()
             
         except ValueError:
-            messagebox.showerror("Error", "Dimensiones inválidas (10-1000)")
+            messagebox.showerror("Error", "Dimensiones inválidas (50-1000)")
 
     def update_zoom_limit(self):
-        # Lógica de seguridad para 8GB RAM:
-        # Regla del usuario: 
-        # - 1000x1000 -> Zoom Max 3
-        # - 100x100   -> Zoom Max 30
+        # Lógica de seguridad para 8GB RAM + User Preference:
+        # - Grid >= 1000 -> Zoom Max 3
+        # - Grid <= 100  -> Zoom Max 10 (Por diseño, aunque en 50x50 podrías más, lo acotamos a 10)
         
-        max_dimension_grid = max(self.rows, self.cols)
+        max_dimension = max(self.rows, self.cols)
         
-        # Usamos un presupuesto de 3000 pixeles de lado
-        # 3000 / 1000 = 3x
-        # 3000 / 100 = 30x
-        safe_pixel_budget = 3000
-        
-        if max_dimension_grid == 0: 
-            max_allowed_zoom = 1
+        if max_dimension >= 1000:
+            max_allowed_zoom = 3
+        elif max_dimension <= 100:
+            max_allowed_zoom = 10
         else:
-            max_allowed_zoom = safe_pixel_budget // max_dimension_grid
+            # Interpolación lineal simple o budget
+            # Presupuesto: 3000 pixeles de lado máximo
+            max_allowed_zoom = 3000 // max_dimension
         
-        # Mínimo zoom siempre es 1, máximo absoluto 30 (pedido por usuario)
-        max_allowed_zoom = max(1, min(30, max_allowed_zoom))
+        # Mínimo siempre 1, Máximo absoluto 10
+        max_allowed_zoom = max(1, min(10, max_allowed_zoom))
         
         # Actualizar slider
         current_zoom = self.zoom_slider.get()
@@ -250,7 +251,7 @@ class GameOfLifeApp:
             self.zoom_slider.set(max_allowed_zoom)
             self.cell_size = max_allowed_zoom
         
-        self.lbl_zoom_info.config(text=f"Max Zoom Seguro: {max_allowed_zoom}x")
+        self.lbl_zoom_info.config(text=f"Max Zoom: {max_allowed_zoom}x")
 
     def change_zoom(self, val):
         self.cell_size = int(val)
@@ -259,22 +260,22 @@ class GameOfLifeApp:
     def toggle_boundary(self):
         self.toroidal = self.toroidal_var.get()
 
-    def toggle_patterns(self):
-        self.show_patterns = self.pattern_var.get()
-        self.update_canvas()
-
     def step_simulation(self):
+        # IMPORTANTE: self.grid ahora contiene edades (0, 1, 2, 3...)
+        # Para calcular vecinos, necesitamos una versión binaria (0 = muerta, >0 = viva)
+        binary_grid = (self.grid > 0).astype(np.uint8)
+
         if self.toroidal:
-            N  = np.roll(self.grid, -1, axis=0)
-            S  = np.roll(self.grid, 1, axis=0)
-            E  = np.roll(self.grid, -1, axis=1)
-            W  = np.roll(self.grid, 1, axis=1)
+            N  = np.roll(binary_grid, -1, axis=0)
+            S  = np.roll(binary_grid, 1, axis=0)
+            E  = np.roll(binary_grid, -1, axis=1)
+            W  = np.roll(binary_grid, 1, axis=1)
             NE = np.roll(N, -1, axis=1)
             NW = np.roll(N, 1, axis=1)
             SE = np.roll(S, -1, axis=1)
             SW = np.roll(S, 1, axis=1)
         else:
-            grid_pad = np.pad(self.grid, 1, mode='constant', constant_values=0)
+            grid_pad = np.pad(binary_grid, 1, mode='constant', constant_values=0)
             N  = grid_pad[:-2, 1:-1]
             S  = grid_pad[2:, 1:-1]
             W  = grid_pad[1:-1, :-2]
@@ -286,18 +287,33 @@ class GameOfLifeApp:
 
         neighbors = N + S + E + W + NE + NW + SE + SW
 
+        # Reglas Vectorizadas con Edad
+        # 1. Nacimiento: Estaba muerta (==0) y vecinos adecuados
         birth_mask = np.isin(neighbors, self.rule_b) & (self.grid == 0)
-        survive_mask = np.isin(neighbors, self.rule_s) & (self.grid == 1)
+        
+        # 2. Supervivencia: Estaba viva (>0) y vecinos adecuados
+        survive_mask = np.isin(neighbors, self.rule_s) & (self.grid > 0)
 
-        self.grid[:] = 0
-        self.grid[birth_mask | survive_mask] = 1
+        # Crear nueva grid
+        next_grid = np.zeros_like(self.grid)
+        
+        # Nacen con edad 1
+        next_grid[birth_mask] = 1 
+        
+        # Sobreviven y envejecen (+1)
+        # Capamos la edad a 3 para no desbordar inútilmente
+        next_grid[survive_mask] = self.grid[survive_mask] + 1
+        next_grid[next_grid > 3] = 3
 
+        self.grid = next_grid
+
+        # Stats
         self.generation += 1
-        pop = np.sum(self.grid)
+        pop = np.sum(binary_grid) # Sumar binario para población correcta
         self.population_history.append(pop)
         
         if pop > 0:
-            indices = np.argwhere(self.grid == 1)
+            indices = np.argwhere(binary_grid == 1)
             mean_pos = np.mean(indices, axis=0)
             var_pos = np.var(indices, axis=0)
             mean_val = np.mean(mean_pos)
@@ -347,77 +363,19 @@ class GameOfLifeApp:
     # --- Manejo Gráfico (Canvas) ---
 
     def update_canvas(self):
-        # Crear imagen RGB desde la matriz numpy
-        # R = Patrón, G = Vivas, B = 0
         h, w = self.grid.shape
         img_array = np.zeros((h, w, 3), dtype=np.uint8)
 
-        # 1. Pintar todas las células vivas de Lila [200, 160, 255]
-        # Usamos máscaras booleanas para asignar el color
-        mask_alive = (self.grid == 1)
-        img_array[mask_alive] = self.color_alive
+        # Mapeo de colores según edad
+        # Edad 1: Lila Oscuro
+        img_array[self.grid == 1] = self.color_age_1
+        # Edad 2: Lila Normal
+        img_array[self.grid == 2] = self.color_age_2
+        # Edad 3+: Blanco/Brillante
+        img_array[self.grid >= 3] = self.color_age_3
 
-        # 2. Identificación de Patrones (Gliders)
-        # Solo buscamos si la opción está activada y hay células
-        if self.show_patterns and self.generation > 0:
-            # Definir la forma del Glider (fase principal viajando sureste)
-            # . * .
-            # . . *
-            # * * *
-            # Buscamos coincidencias exactas usando slicing de numpy
-            # Esto es MUCHO más rápido que bucles for
-            
-            # Recortes de la grid desplazados para comprobar vecinos relativos
-            # Posiciones relativas donde debe haber un 1: (0,1), (1,2), (2,0), (2,1), (2,2)
-            
-            # Aseguramos no salirnos de rango recortando los bordes
-            # Grid base (0,0) hasta (H-2, W-2)
-            g = self.grid
-            
-            # Construimos una máscara donde se cumpla la condición del Glider
-            # Usamos lógica AND (&) bit a bit
-            try:
-                # Top-Middle (0,1)
-                c1 = g[:-2, 1:-1] == 1
-                # Middle-Right (1,2)
-                c2 = g[1:-1, 2:] == 1
-                # Bottom-Left (2,0)
-                c3 = g[2:, :-2] == 1
-                # Bottom-Middle (2,1)
-                c4 = g[2:, 1:-1] == 1
-                # Bottom-Right (2,2)
-                c5 = g[2:, 2:] == 1
-                
-                # Células que deben estar muertas para que sea un glider limpio (opcional, pero mejora precisión)
-                # Top-Left, Top-Right, Middle-Left, Middle-Middle
-                e1 = g[:-2, :-2] == 0
-                e2 = g[:-2, 2:] == 0
-                e3 = g[1:-1, :-2] == 0
-                e4 = g[1:-1, 1:-1] == 0
-
-                # Encontrar dónde coinciden TODAS las condiciones
-                glider_matches = c1 & c2 & c3 & c4 & c5 & e1 & e2 & e3 & e4
-                
-                # glider_matches es una matriz True/False del tamaño reducido (h-2, w-2)
-                # Necesitamos pintar los pixeles correspondientes en la imagen original
-                
-                # Obtenemos las coordenadas de los gliders encontrados
-                y_idxs, x_idxs = np.where(glider_matches)
-                
-                # Pintar de ROJO [255, 0, 0] las 5 células de cada glider encontrado
-                for y, x in zip(y_idxs, x_idxs):
-                    # Coordenadas relativas al match
-                    points = [(y, x+1), (y+1, x+2), (y+2, x), (y+2, x+1), (y+2, x+2)]
-                    for py, px in points:
-                        img_array[py, px] = self.color_pattern
-            
-            except Exception:
-                pass # Evitar crash si la matriz es muy pequeña (<3x3)
-
-        # Crear imagen PIL
         pil_image = Image.fromarray(img_array, mode='RGB')
         
-        # Escalar según Zoom
         new_w = int(w * self.cell_size)
         new_h = int(h * self.cell_size)
         
@@ -425,7 +383,6 @@ class GameOfLifeApp:
         
         self.tk_image = ImageTk.PhotoImage(pil_image)
 
-        # Configurar región de scroll
         self.canvas.config(scrollregion=(0, 0, new_w, new_h))
         self.canvas.create_image(0, 0, anchor=tk.NW, image=self.tk_image)
 
@@ -442,13 +399,14 @@ class GameOfLifeApp:
     def on_canvas_drag(self, event):
         row, col = self.get_cell_coords(event)
         if 0 <= row < self.rows and 0 <= col < self.cols:
-            self.grid[row, col] = 1 
+            self.grid[row, col] = 1 # Dibujar fuerza edad 1
             self.update_canvas()
 
     # --- Archivos ---
     def save_state(self):
         filename = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt")])
         if filename:
+            # Guardamos la grilla tal cual (con edades)
             np.savetxt(filename, self.grid, fmt='%d')
             messagebox.showinfo("Info", "Guardado exitosamente")
 
@@ -471,7 +429,7 @@ class GameOfLifeApp:
 
     # --- Experimentos ---
     def setup_glider_experiment(self):
-        density = simpledialog.askinteger("Input", "Gliders por sitio (10, 100, 1000 aprox):", minvalue=1, maxvalue=1000)
+        density = simpledialog.askinteger("Input", "Gliders por sitio (10, 100, 1000 aprox):", minvalue=1, maxvalue=5000)
         if not density: return
         
         self.clear_grid()
