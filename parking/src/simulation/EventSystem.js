@@ -13,6 +13,9 @@ export const EventType = {
     VEHICLE_EXIT: 'VEHICLE_EXIT',
     PEDESTRIAN_ENTER: 'PEDESTRIAN_ENTER',
     PEDESTRIAN_EXIT: 'PEDESTRIAN_EXIT',
+    PARK_RESERVED: 'PARK_RESERVED',
+    PEDESTRIAN_WAIT: 'PEDESTRIAN_WAIT',
+    PEDESTRIAN_CROSSWALK: 'PEDESTRIAN_CROSSWALK',
 };
 
 // Severity levels
@@ -34,8 +37,11 @@ const SEVERITY_MAP = {
     [EventType.WRONG_WAY]: Severity.WARNING,
     [EventType.ENTRANCE_BLOCKED]: Severity.WARNING,
     [EventType.EXIT_BLOCKED]: Severity.WARNING,
+    [EventType.PARK_RESERVED]: Severity.WARNING,
     [EventType.COLLISION]: Severity.DANGER,
     [EventType.PEDESTRIAN_HIT]: Severity.DANGER,
+    [EventType.PEDESTRIAN_WAIT]: Severity.INFO,
+    [EventType.PEDESTRIAN_CROSSWALK]: Severity.INFO,
 };
 
 // Labels in Spanish for the UI
@@ -53,6 +59,9 @@ export const EventLabel = {
     [EventType.VEHICLE_EXIT]: '🚗 Vehículo salió',
     [EventType.PEDESTRIAN_ENTER]: '🚶 Peatón ingresó',
     [EventType.PEDESTRIAN_EXIT]: '🚶 Peatón salió',
+    [EventType.PARK_RESERVED]: '♿ Cajón reservado ocupado',
+    [EventType.PEDESTRIAN_WAIT]: '🚶 Peatón esperando',
+    [EventType.PEDESTRIAN_CROSSWALK]: '🚶 Peatón en cruce peatonal',
 };
 
 /**

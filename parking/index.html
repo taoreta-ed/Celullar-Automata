@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simulador de Estacionamiento</title>
   <meta name="description" content="Simulador visual de estacionamiento con eventos aleatorios — autómata celular" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅿️</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅿️</text></svg>" />
 </head>
+
 <body>
   <div class="app">
     <!-- ─── Header ─── -->
@@ -71,8 +74,12 @@
 
         <!-- Speed -->
         <div class="control-group">
-          <label>Velocidad (ms/tick) <span class="value" id="val-speed">200</span></label>
-          <input type="range" id="param-speed" min="30" max="1000" step="10" value="200" />
+          <label>Velocidad de simulación <span class="value" id="val-speed">Normal</span></label>
+          <div class="slider-with-icons">
+            <span>🐇</span>
+            <input type="range" id="param-speed" min="30" max="1000" step="10" value="200" style="direction: rtl;" />
+            <span>🐢</span>
+          </div>
         </div>
 
         <!-- Seed -->
@@ -91,6 +98,10 @@
         <div class="btn-group">
           <button class="btn danger" id="btn-reset" disabled>↻ Reiniciar</button>
         </div>
+        <div class="btn-group-row">
+          <button class="btn secondary" id="btn-export" title="Exportar resultado actual a JSON">💾 Exportar</button>
+          <button class="btn secondary" id="btn-history" title="Ver historial de simulaciones">📂 Historial</button>
+        </div>
 
         <!-- Legend -->
         <div class="legend">
@@ -100,8 +111,14 @@
           <div class="legend-item"><span class="legend-swatch" style="background:#4a4a5a"></span> Acera</div>
           <div class="legend-item"><span class="legend-swatch" style="background:#0f3d3e"></span> Entrada</div>
           <div class="legend-item"><span class="legend-swatch" style="background:#3d0f0f"></span> Salida</div>
-          <div class="legend-item"><span class="legend-swatch" style="background:#6c63ff;border-radius:50%"></span> Auto</div>
-          <div class="legend-item"><span class="legend-swatch" style="background:#c9a96e;border-radius:50%;width:10px;height:10px"></span> Peatón</div>
+          <div class="legend-item"><span class="legend-swatch"
+              style="background:#16213e;color:#4cc9f0;display:flex;align-items:center;justify-content:center;font-size:10px">♿</span>
+            Cajón reservado</div>
+          <div class="legend-item"><span class="legend-swatch crosswalk-legend"></span> Cruce peatonal</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#6c63ff;border-radius:50%"></span> Auto
+          </div>
+          <div class="legend-item"><span class="legend-swatch"
+              style="background:#c9a96e;border-radius:50%;width:10px;height:10px"></span> Peatón</div>
         </div>
       </div>
     </aside>
@@ -141,6 +158,26 @@
     </aside>
   </div>
 
+  <!-- ─── History Modal ─── -->
+  <div class="modal-overlay" id="history-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>📂 Historial de Simulaciones</h2>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="history-list-container">
+          <p class="empty-msg">No hay simulaciones guardadas aún.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn secondary" id="btn-clear-history">Limpiar todo</button>
+        <button class="btn" id="btn-export-all">Exportar todo (JSON)</button>
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>

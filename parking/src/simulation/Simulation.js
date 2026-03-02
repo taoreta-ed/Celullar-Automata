@@ -255,4 +255,19 @@ export default class Simulation {
             );
         }
     }
+
+    /** Returns a serializable summary of the simulation state. */
+    toSummary() {
+        return {
+            seed: this.seed,
+            params: { ...this.params },
+            tick: this.tick,
+            eventSummary: this.eventLog.summary(),
+            totalEvents: this.eventLog.events.length,
+            vehicleCount: this.vehicles.length,
+            pedestrianCount: this.pedestrians.length,
+            finished: this.finished,
+            timestamp: Date.now()
+        };
+    }
 }

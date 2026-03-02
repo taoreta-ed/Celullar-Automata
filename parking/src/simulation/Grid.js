@@ -7,6 +7,7 @@ export const CellType = {
     EXIT: 'exit',
     OBSTACLE: 'obstacle',
     EMPTY: 'empty',
+    CROSSWALK: 'crosswalk',
 };
 
 // Road directions a vehicle can travel on a given cell
@@ -35,6 +36,10 @@ class Cell {
         this.blocked = false;
         /** Parking spot id (for labelling) */
         this.spotId = null;
+        /** Reserved type: false, 'disability' */
+        this.reserved = false;
+        /** Is this a crosswalk cell? */
+        this.crosswalk = false;
     }
 
     get isOccupied() {
@@ -50,7 +55,16 @@ class Cell {
             this.type === CellType.ROAD ||
             this.type === CellType.ENTRANCE ||
             this.type === CellType.EXIT ||
-            this.type === CellType.PARKING_SPOT
+            this.type === CellType.PARKING_SPOT ||
+            this.type === CellType.CROSSWALK
+        );
+    }
+
+    get isWalkablePed() {
+        return (
+            this.type === CellType.SIDEWALK ||
+            this.type === CellType.CROSSWALK ||
+            this.type === CellType.ROAD
         );
     }
 }
@@ -198,6 +212,49 @@ export default class Grid {
         grid.set(0, 18, CellType.EXIT, [Direction.LEFT]);
         grid.set(0, 19, CellType.EXIT, [Direction.LEFT]);
 
+        // ─── Reserved disability spots (♿) near entrances ───
+        // First 2 spots in the first parking row (near top-left entrance)
+        const reservedSpotIds = [1, 2];
+        for (const pr of [parkingRows[0]]) {
+            let count = 0;
+            for (let c = 3; c <= cols - 4 && count < 2; c += 2) {
+                for (const r of pr.rows) {
+                    const cell = grid.get(c, r);
+                    if (cell && cell.type === CellType.PARKING_SPOT) {
+                        cell.reserved = 'disability';
+                    }
+                }
+                count++;
+            }
+        }
+        // Last 2 spots in the last parking row (near bottom-right entrance)
+        for (const pr of [parkingRows[3]]) {
+            let count = 0;
+            for (let c = cols - 4; c >= 3 && count < 2; c -= 2) {
+                for (const r of pr.rows) {
+                    const cell = grid.get(c, r);
+                    if (cell && cell.type === CellType.PARKING_SPOT) {
+                        cell.reserved = 'disability';
+                    }
+                }
+                count++;
+            }
+        }
+
+        // ─── Crosswalks ───
+        // Vertical crosswalks connecting sidewalks to lanes at a few column positions
+        const crosswalkCols = [5, 15, 25];
+        for (const cc of crosswalkCols) {
+            // Top sidewalk → first lane
+            grid.set(cc, 1, CellType.CROSSWALK, [Direction.UP, Direction.DOWN]);
+            const topCell = grid.get(cc, 1);
+            if (topCell) topCell.crosswalk = true;
+            // Bottom sidewalk → last lane
+            grid.set(cc, rows - 2, CellType.CROSSWALK, [Direction.UP, Direction.DOWN]);
+            const botCell = grid.get(cc, rows - 2);
+            if (botCell) botCell.crosswalk = true;
+        }
+
         return grid;
     }
 
@@ -214,11 +271,23 @@ export default class Grid {
         return results;
     }
 
-    /** Get all free parking spots. */
-    getFreeParkingSpots() {
+    /** Get all free parking spots (optionally excluding reserved). */
+    getFreeParkingSpots(includeReserved = true) {
         return this.findCells(CellType.PARKING_SPOT).filter(
-            (s) => !s.cell.parked && !s.cell.isOccupied
+            (s) => !s.cell.parked && !s.cell.isOccupied && (includeReserved || !s.cell.reserved)
         );
+    }
+
+    /** Get all free reserved disability spots. */
+    getFreeReservedSpots() {
+        return this.findCells(CellType.PARKING_SPOT).filter(
+            (s) => !s.cell.parked && !s.cell.isOccupied && s.cell.reserved === 'disability'
+        );
+    }
+
+    /** Get crosswalk cells. */
+    getCrosswalks() {
+        return this.findCells(CellType.CROSSWALK);
     }
 
     /** Get entrance cells. */

@@ -2,13 +2,23 @@ import './styles.css';
 import Simulation, { DEFAULT_PARAMS } from './simulation/Simulation.js';
 import Renderer from './renderer/Renderer.js';
 import { EventLabel, Severity } from './simulation/EventSystem.js';
+import SimulationHistory from './simulation/SimulationHistory.js';
 
 // ─── DOM Refs ───
 const canvas = document.getElementById('sim-canvas');
 const btnStart = document.getElementById('btn-start');
 const btnPause = document.getElementById('btn-pause');
 const btnReset = document.getElementById('btn-reset');
+const btnExport = document.getElementById('btn-export');
+const btnHistory = document.getElementById('btn-history');
 const eventList = document.getElementById('event-list');
+
+// Modal Elements
+const historyModal = document.getElementById('history-modal');
+const modalClose = document.getElementById('modal-close');
+const historyListContainer = document.getElementById('history-list-container');
+const btnClearHistory = document.getElementById('btn-clear-history');
+const btnExportAll = document.getElementById('btn-export-all');
 
 // Stat counters
 const statTick = document.getElementById('stat-tick');
@@ -38,8 +48,17 @@ for (const s of sliders) {
     const el = document.getElementById(s.id);
     const valEl = document.getElementById(s.valId);
     el.addEventListener('input', () => {
-        const v = s.isInt ? parseInt(el.value) : parseFloat(el.value);
-        valEl.textContent = el.value;
+        if (s.key === 'speed') {
+            const ms = parseInt(el.value);
+            let label = 'Normal';
+            if (ms < 100) label = '🚀 Muy rápido';
+            else if (ms < 180) label = '🐇 Rápido';
+            else if (ms > 500) label = '🐢 Lento';
+            else if (ms > 350) label = '🚶 Muy lento';
+            valEl.textContent = label;
+        } else {
+            valEl.textContent = el.value;
+        }
     });
 }
 
@@ -141,7 +160,11 @@ btnStart.addEventListener('click', () => {
             btnStart.textContent = '▶ Iniciar';
             btnStart.disabled = true;
             btnPause.disabled = true;
+            btnExport.disabled = false;
             setControlsDisabled(false);
+
+            // Auto-save to history
+            SimulationHistory.save(sim);
         });
 
         // Start render loop
@@ -191,8 +214,85 @@ btnReset.addEventListener('click', () => {
     btnStart.disabled = false;
     btnPause.disabled = true;
     btnReset.disabled = true;
+    btnExport.disabled = true;
     setControlsDisabled(false);
 });
+
+// ─── Export & History ───
+btnExport.addEventListener('click', () => {
+    if (sim) SimulationHistory.exportSimulationJSON(sim);
+});
+
+btnHistory.addEventListener('click', () => {
+    updateHistoryList();
+    historyModal.classList.add('active');
+});
+
+modalClose.addEventListener('click', () => {
+    historyModal.classList.remove('active');
+});
+
+btnClearHistory.addEventListener('click', () => {
+    if (confirm('¿Estás seguro de que quieres borrar todo el historial?')) {
+        SimulationHistory.clearAll();
+        updateHistoryList();
+    }
+});
+
+btnExportAll.addEventListener('click', () => {
+    SimulationHistory.exportAllAsJSON();
+});
+
+function updateHistoryList() {
+    const history = SimulationHistory.getAll();
+    if (history.length === 0) {
+        historyListContainer.innerHTML = '<p class="empty-msg">No hay simulaciones guardadas aún.</p>';
+        return;
+    }
+
+    historyListContainer.innerHTML = history.map(h => {
+        const date = new Date(h.timestamp).toLocaleString();
+        const s = h.eventSummary;
+        return `
+            <div class="history-item">
+                <div class="history-info">
+                    <span class="history-date">${date}</span>
+                    <span class="history-seed">Seed: ${h.seed}</span>
+                    <div class="history-stats">
+                        <span>Ticks: ${h.totalTicks}</span>
+                        <span>🅿️ ${s.PARK_SUCCESS || 0}</span>
+                        <span>💥 ${s.COLLISION || 0}</span>
+                        <span>♿ ${s.PARK_RESERVED || 0}</span>
+                    </div>
+                </div>
+                <div class="history-actions">
+                    <button class="btn secondary sm" onclick="window.downloadHistory('${h.id}')" title="Descargar JSON">💾</button>
+                    <button class="btn danger sm" onclick="window.deleteHistory('${h.id}')" title="Eliminar localmente">🗑️</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Global window functions for onclick handlers in template
+window.downloadHistory = (id) => {
+    const records = SimulationHistory.getAll();
+    const record = records.find(r => r.id === id);
+    if (record) {
+        const blob = new Blob([JSON.stringify(record, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${record.id}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+};
+
+window.deleteHistory = (id) => {
+    SimulationHistory.deleteById(id);
+    updateHistoryList();
+};
 
 // Live speed change
 document.getElementById('param-speed').addEventListener('input', (e) => {

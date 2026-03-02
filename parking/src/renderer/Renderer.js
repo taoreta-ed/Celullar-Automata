@@ -11,6 +11,7 @@ const CELL_COLORS = {
     [CellType.ENTRANCE]: '#0f3d3e',
     [CellType.EXIT]: '#3d0f0f',
     [CellType.OBSTACLE]: '#0f0f1a',
+    [CellType.CROSSWALK]: '#2d2d44',
 };
 
 const CELL_COLORS_BLOCKED = {
@@ -113,7 +114,24 @@ export default class Renderer {
                     ctx.font = `${Math.max(8, cs * 0.35)}px monospace`;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
-                    ctx.fillText(cell.spotId, x + cs / 2, y + cs / 2);
+
+                    // If reserved, draw ♿ instead of or next to ID
+                    if (cell.reserved === 'disability') {
+                        ctx.fillStyle = '#4cc9f0';
+                        ctx.fillText('♿', x + cs / 2, y + cs / 2);
+                    } else {
+                        ctx.fillText(cell.spotId, x + cs / 2, y + cs / 2);
+                    }
+                }
+
+                // Crosswalk stripes
+                if (cell.type === CellType.CROSSWALK && cs > 10) {
+                    ctx.fillStyle = '#ffffff40';
+                    const stripeW = cs * 0.15;
+                    const gap = cs * 0.15;
+                    for (let sy = y + gap; sy < y + cs - gap; sy += stripeW + gap) {
+                        ctx.fillRect(x + cs * 0.2, sy, cs * 0.6, stripeW);
+                    }
                 }
 
                 // Entrance / Exit labels
@@ -230,12 +248,31 @@ export default class Renderer {
             ctx.lineWidth = 1;
             ctx.stroke();
 
-            if (p.state === PedestrianState.CROSSING) {
+            if (p.state === PedestrianState.CROSSING || p.state === PedestrianState.USING_CROSSWALK) {
                 ctx.beginPath();
                 ctx.arc(x, y, r + 3, 0, Math.PI * 2);
-                ctx.strokeStyle = '#ffaa0080';
+                ctx.strokeStyle = p.state === PedestrianState.USING_CROSSWALK ? '#4cc9f080' : '#ffaa0080';
                 ctx.lineWidth = 1.5;
                 ctx.stroke();
+            }
+
+            if (p.state === PedestrianState.WAITING) {
+                const pulse = (Math.sin(Date.now() / 150) + 1) / 2;
+                ctx.beginPath();
+                ctx.arc(x, y, r + 4 * pulse, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(255, 255, 255, ${0.5 * (1 - pulse)})`;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+
+            if (p.state === PedestrianState.GOING_TO_VEHICLE) {
+                ctx.setLineDash([2, 2]);
+                ctx.beginPath();
+                ctx.arc(x, y, r + 2, 0, Math.PI * 2);
+                ctx.strokeStyle = '#c9a96e';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                ctx.setLineDash([]);
             }
         }
 

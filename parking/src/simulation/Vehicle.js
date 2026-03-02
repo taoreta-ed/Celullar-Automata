@@ -72,8 +72,18 @@ export default class Vehicle {
 
     /** Try to find & assign a free parking spot. Returns true if found. */
     assignSpot(grid, rng) {
-        const freeSpots = grid.getFreeParkingSpots();
-        if (freeSpots.length === 0) return false;
+        // Normal/distracted drivers avoid reserved spots; aggressive may take them
+        const excludeReserved = this.driverType !== DriverType.AGGRESSIVE;
+        const freeSpots = grid.getFreeParkingSpots(!excludeReserved);
+        if (freeSpots.length === 0) {
+            // Fallback: include reserved if desperate
+            const allFree = grid.getFreeParkingSpots(true);
+            if (allFree.length === 0) return false;
+            const idx = Math.floor(rng() * allFree.length);
+            this.targetSpot = { col: allFree[idx].col, row: allFree[idx].row };
+            this.state = VehicleState.SEARCHING;
+            return true;
+        }
         const idx = Math.floor(rng() * freeSpots.length);
         this.targetSpot = { col: freeSpots[idx].col, row: freeSpots[idx].row };
         this.state = VehicleState.SEARCHING;
@@ -176,6 +186,16 @@ export default class Vehicle {
             this.col === this.targetSpot.col &&
             this.row === this.targetSpot.row
         ) {
+            const spotCell = grid.get(this.col, this.row);
+
+            // Check if occupying a reserved disability spot
+            if (spotCell && spotCell.reserved === 'disability') {
+                events.push({
+                    type: 'PARK_RESERVED',
+                    description: `${this.id} (${this.driverType}) ocupó cajón reservado ♿ #${spotCell.spotId || '?'}`,
+                });
+            }
+
             // Decide if bad parking based on driver type
             const badParkChance =
                 this.driverType === DriverType.AGGRESSIVE
@@ -188,12 +208,12 @@ export default class Vehicle {
                 this.badParking = true;
                 events.push({
                     type: 'PARK_BAD',
-                    description: `${this.id} (${this.driverType}) se estacionó mal en cajón #${grid.get(this.col, this.row)?.spotId || '?'}`,
+                    description: `${this.id} (${this.driverType}) se estacionó mal en cajón #${spotCell?.spotId || '?'}`,
                 });
             } else {
                 events.push({
                     type: 'PARK_SUCCESS',
-                    description: `${this.id} estacionado correctamente en cajón #${grid.get(this.col, this.row)?.spotId || '?'}`,
+                    description: `${this.id} estacionado correctamente en cajón #${spotCell?.spotId || '?'}`,
                 });
             }
             this.state = VehicleState.PARKING;
