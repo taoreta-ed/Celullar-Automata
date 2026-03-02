@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Estacionamiento</title>
+  <meta name="description" content="Simulador visual de estacionamiento con eventos aleatorios — autómata celular" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅿️</text></svg>" />
+</head>
+<body>
+  <div class="app">
+    <!-- ─── Header ─── -->
+    <header class="header">
+      <h1><span class="emoji">🅿️</span> Simulador de Estacionamiento</h1>
+      <div class="header-stats">
+        <div class="stat">Tick: <span class="stat-value" id="stat-tick">0</span></div>
+        <div class="stat">Autos: <span class="stat-value" id="stat-vehicles">0</span></div>
+        <div class="stat">Peatones: <span class="stat-value" id="stat-pedestrians">0</span></div>
+        <div class="stat">Eventos: <span class="stat-value" id="stat-events">0</span></div>
+        <div class="stat">Seed: <span class="stat-value" id="stat-seed">—</span></div>
+      </div>
+    </header>
+
+    <!-- ─── Left Panel: Controls ─── -->
+    <aside class="panel" id="controls-panel">
+      <div class="panel-header">⚙️ Configuración</div>
+      <div class="panel-body">
+        <!-- Arrival rate -->
+        <div class="control-group">
+          <label>Tasa de llegada de autos <span class="value" id="val-arrival">0.30</span></label>
+          <input type="range" id="param-arrival" min="0" max="1" step="0.05" value="0.30" />
+        </div>
+
+        <!-- Bad driver probability -->
+        <div class="control-group">
+          <label>Prob. mal conductor <span class="value" id="val-bad">0.15</span></label>
+          <input type="range" id="param-bad" min="0" max="1" step="0.05" value="0.15" />
+        </div>
+
+        <!-- Pedestrian density -->
+        <div class="control-group">
+          <label>Densidad peatonal <span class="value" id="val-ped">0.15</span></label>
+          <input type="range" id="param-ped" min="0" max="1" step="0.05" value="0.15" />
+        </div>
+
+        <!-- Collision probability -->
+        <div class="control-group">
+          <label>Prob. colisión <span class="value" id="val-collision">0.05</span></label>
+          <input type="range" id="param-collision" min="0" max="0.5" step="0.01" value="0.05" />
+        </div>
+
+        <!-- Blockage probability -->
+        <div class="control-group">
+          <label>Prob. bloqueo <span class="value" id="val-block">0.02</span></label>
+          <input type="range" id="param-block" min="0" max="0.2" step="0.01" value="0.02" />
+        </div>
+
+        <!-- Pedestrian crossing probability -->
+        <div class="control-group">
+          <label>Prob. peatón cruza calle <span class="value" id="val-cross">0.10</span></label>
+          <input type="range" id="param-cross" min="0" max="0.5" step="0.01" value="0.10" />
+        </div>
+
+        <hr class="divider" />
+
+        <!-- Max ticks -->
+        <div class="control-group">
+          <label>Duración (ticks) <span class="value" id="val-ticks">300</span></label>
+          <input type="number" id="param-ticks" min="50" max="5000" step="50" value="300" />
+        </div>
+
+        <!-- Speed -->
+        <div class="control-group">
+          <label>Velocidad (ms/tick) <span class="value" id="val-speed">200</span></label>
+          <input type="range" id="param-speed" min="30" max="1000" step="10" value="200" />
+        </div>
+
+        <!-- Seed -->
+        <div class="control-group">
+          <label>Seed (vacío = aleatorio) <span class="value" id="val-seed">—</span></label>
+          <input type="number" id="param-seed" placeholder="Aleatorio" />
+        </div>
+
+        <hr class="divider" />
+
+        <!-- Action buttons -->
+        <div class="btn-group">
+          <button class="btn primary" id="btn-start">▶ Iniciar</button>
+          <button class="btn" id="btn-pause" disabled>⏸ Pausa</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn danger" id="btn-reset" disabled>↻ Reiniciar</button>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+          <div class="legend-item"><span class="legend-swatch" style="background:#2d2d44"></span> Calle</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#1e3a5f"></span> Cajón libre</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#3b1a1a"></span> Cajón ocupado</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#4a4a5a"></span> Acera</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#0f3d3e"></span> Entrada</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#3d0f0f"></span> Salida</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#6c63ff;border-radius:50%"></span> Auto</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#c9a96e;border-radius:50%;width:10px;height:10px"></span> Peatón</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ─── Center: Canvas ─── -->
+    <main class="canvas-area" id="canvas-area">
+      <canvas id="sim-canvas"></canvas>
+    </main>
+
+    <!-- ─── Right Panel: Event Log ─── -->
+    <aside class="panel" id="log-panel">
+      <div class="panel-header">📋 Registro de eventos</div>
+      <div class="panel-body">
+        <!-- Summary cards -->
+        <div class="summary-grid" id="summary-grid">
+          <div class="summary-card">
+            <div class="count" id="sum-parked">0</div>
+            <div class="label">Estacionados</div>
+          </div>
+          <div class="summary-card">
+            <div class="count" id="sum-bad">0</div>
+            <div class="label">Mal estacionados</div>
+          </div>
+          <div class="summary-card">
+            <div class="count" id="sum-collisions">0</div>
+            <div class="label">Colisiones</div>
+          </div>
+          <div class="summary-card">
+            <div class="count" id="sum-ped-hit">0</div>
+            <div class="label">Peatones atropellados</div>
+          </div>
+        </div>
+        <hr class="divider" />
+        <!-- Event list -->
+        <div id="event-list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
