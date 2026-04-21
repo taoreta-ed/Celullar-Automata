@@ -6,10 +6,9 @@
 \usepackage{geometry}
 \geometry{letterpaper, margin=1in}
 \usepackage{hyperref}
-
-\title{Reporte: Programa Auto-replicante (Quine) y Cálculo del Cubo de L}
-\author{Tarea de Autómatas Celulares}
-\date{\today}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{eso-pic}
 
 \lstset{
     language=Python,
@@ -24,18 +23,93 @@
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\begin{center}
+    % Escudos e Institución
+    \begin{minipage}{0.15\textwidth}
+        \begin{flushleft}
+            \includegraphics[height=2.5cm]{ipn.png}
+        \end{flushleft}
+    \end{minipage}%
+    \begin{minipage}{0.70\textwidth}
+        \centering
+        {\Large \textbf{Instituto Politécnico Nacional}}\\[0.3cm]
+        {\large \textbf{Escuela Superior de Cómputo}}
+    \end{minipage}%
+    \begin{minipage}{0.15\textwidth}
+        \begin{flushright}
+            \includegraphics[height=2.5cm]{escom.png}
+        \end{flushright}
+    \end{minipage}
+
+    \vspace{1cm}
+
+    % Imagen ilustrativa en medio
+    \includegraphics[width=\textwidth,height=10cm,keepaspectratio]{abhi-verma-Zv96GyrvZ8I-unsplash.jpg}
+
+    \vspace{1cm}
+
+    {\Huge \textbf{Programa de auto-copiado}}\\[1.5cm]
+
+    {\large \textbf{Hernández Castro Eduardo}}\\[0.5cm]
+    
+    {\large Complex Systems}\\[0.3cm]
+    {\large Genaro Juarez Martinez}\\[0.3cm]
+    {\large 7CM4}\\[1cm]
+
+    \vfill
+
+    {\large 20 de Abril del 2026}
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{1}
 
 \section{Introducción}
-El problema de la auto-reproducción en computadoras es un ejercicio conceptual fascinante desarrollado inicialmente por John von Neumann, según se detalla en el documento \textit{Life and evolution in computers} de M. Mitchell (2001). Un programa auto-replicante (también conocido como \textit{Quine}) es aquel que al ejecutarse produce como salida una copia exacta de su propio código fuente.
+El problema de la auto-reproducción en computadoras es un ejercicio conceptual fascinante desarrollado inicialmente por John von Neumann, según se detalla en el documento \textit{Life and evolution in computers} de M. Mitchell (2001). Un programa auto-replicante es aquel que al ejecutarse produce como salida una copia exacta de su propio código fuente. 
+
+A este tipo de programas se les conoce comúnmente como \textbf{\textit{Quines}}, un término acuñado por el científico cognitivo Douglas Hofstadter en su famoso libro \textit{Gödel, Escher, Bach}, en honor al filósofo y lógico Willard Van Orman Quine, quien estudió exhaustivamente la referencia indirecta y las paradojas auto-referenciales en el lenguaje.
 
 \section{Desarrollo del Programa}
-En esta práctica se desarrolló un Quine en lenguaje Python. La estructura fundamental de este programa consiste en asignar a una variable (generalmente una cadena de texto) el código que la imprime y utilizar funciones de formato de cadenas para inyectar dicha representación nuevamente en la lógica de impresión.
+En esta práctica se desarrolló un Quine en lenguaje Python. La estructura fundamental de este programa consiste en asignar a una variable el código que la imprime y utilizar funciones de formato de cadenas para inyectar dicha representación nuevamente en la salida.
 
-Adicionalmente, y como se especificó en las instrucciones, el programa incluye las líneas de código para el cálculo del cubo de una variable $L$. Esto es una demostración de que el programa no solo se replica a sí mismo de manera exacta y sin un ciclo infinito externo, sino que durante el proceso puede realizar instrucciones computacionales útiles o procesamiento de información extra, un principio de dualidad dato/instrucción clave de los sistemas vivos descrito en el artículo.
+Es importante notar la diferencia clave entre este enfoque y el pseudo-código expuesto en la lectura. A continuación se muestra el código propuesto por la referencia como ejemplo de un programa que se auto-copia:
+
+\begin{lstlisting}[language=]
+1  program copy
+2         L = mem + 1;
+3         print("program copy");
+4         print("       L = mem + 1;");
+5         loop until line[L] = "end"
+6         {
+7                print(line[L]);
+8                L = L + 1;
+9         }
+10        print("end");
+11 end
+\end{lstlisting}
+
+En el ejemplo del artículo de Mitchell, el lenguaje simulado opera a bajo nivel, por lo que requiere el uso de un ciclo (\texttt{loop until}) y de un apuntador para recorrer físicamente la memoria del programa línea tras línea y mandarla a imprimir. En contraste, debido a que Python es un lenguaje de alto nivel, podemos clonar nuestra propia estructura sin emplear ningún ciclo. En vez de eso, asignamos toda la "genética" a una sola variable (\texttt{s}). Luego, usando el operador de formateo \texttt{\%} y el comodín \texttt{\%r}, inyectamos esa misma cadena, rodeada automáticamente por comillas, sobre sí misma (\texttt{s \% s}).
+
+Adicionalmente, el programa incluye las líneas de código para el cálculo del cubo de una variable $L$. Esto es una demostración de que el programa no solo se replica a sí mismo de manera exacta y sin un ciclo infinito externo, sino que durante el proceso puede realizar instrucciones computacionales útiles o procesamiento de información extra, un principio de dualidad dato/instrucción clave de los sistemas vivos descrito en el artículo.
 
 \section{Conclusión}
-A pesar de la aparente paradoja de definir un programa que se contiene a sí mismo sin caer en una recursión infinita, utilizar los datos iniciales primero como bloque de instrucciones a ser interpretadas y luego como datos mismos a ser copiados resuelve elegantemente el problema. Esto es directamente análogo a la forma en que los sistemas biológicos se replican.
+A pesar de la aparente paradoja de intentar definir un programa que se contiene a sí mismo sin caer en una recursión infinita, ¿cómo se resuelve de forma elegante? Usando el dualismo Instrucción/Dato.
+
+En lugar de tratar de que el programa ``sepa'' cómo es en su totalidad desde el inicio, se separa la lógica en dos partes:
+\begin{itemize}
+    \item \textbf{Los Datos}: Se guarda la estructura del programa en una variable plana (en nuestro caso de Python, es todo el texto que está adentro de la variable de cadena \texttt{s}). Mientras la computadora está guardando los datos en esta variable, no está ejecutando nada de ese texto, solo lo ve como letras muertas (datos a ser copiados).
+    \item \textbf{Las Instrucciones}: Luego se tienen las instrucciones reales y ejecutables del código. Las instrucciones ordenan tomar esa variable de datos inactiva, aplicarle algo de formato (\texttt{s \% s}), y mandarla a la pantalla.
+\end{itemize}
+
+La ``elegancia'' reside en que el texto dentro de la variable (\texttt{s}) y las instrucciones que lo manipulan son exactamente la misma información, pero la computadora la lee primero como ``letras muertas que deben ser impresas'' (datos) y luego como ``órdenes reales que la computadora debe obedecer'' (instrucciones).
+
+Esto es exactamente lo que Von Neumann descubrió y lo que la lectura de Mitchell menciona sobre la biología: el ADN es al mismo tiempo un bloque de instrucciones (cuando se lee para fabricar proteínas en el ribosoma) y una cadena de datos inactivos (cuando la célula simplemente la agarra y saca una fotocopia química para la reproducción celular).
+
+\begin{thebibliography}{9}
+\bibitem{mitchell} 
+Mitchell, M. (2001). \textit{Life and evolution in computers}. History and Philosophy of the Life Sciences, 23(3-4):361-383.
+\end{thebibliography}
 
 \appendix
 \section{Código Fuente del Programa (\texttt{quine.py})}
