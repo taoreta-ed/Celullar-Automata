@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage{hyperref}
+
+\title{Reporte: Programa Auto-replicante (Quine) y Cálculo del Cubo de L}
+\author{Tarea de Autómatas Celulares}
+\date{\today}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+El problema de la auto-reproducción en computadoras es un ejercicio conceptual fascinante desarrollado inicialmente por John von Neumann, según se detalla en el documento \textit{Life and evolution in computers} de M. Mitchell (2001). Un programa auto-replicante (también conocido como \textit{Quine}) es aquel que al ejecutarse produce como salida una copia exacta de su propio código fuente.
+
+\section{Desarrollo del Programa}
+En esta práctica se desarrolló un Quine en lenguaje Python. La estructura fundamental de este programa consiste en asignar a una variable (generalmente una cadena de texto) el código que la imprime y utilizar funciones de formato de cadenas para inyectar dicha representación nuevamente en la lógica de impresión.
+
+Adicionalmente, y como se especificó en las instrucciones, el programa incluye las líneas de código para el cálculo del cubo de una variable $L$. Esto es una demostración de que el programa no solo se replica a sí mismo de manera exacta y sin un ciclo infinito externo, sino que durante el proceso puede realizar instrucciones computacionales útiles o procesamiento de información extra, un principio de dualidad dato/instrucción clave de los sistemas vivos descrito en el artículo.
+
+\section{Conclusión}
+A pesar de la aparente paradoja de definir un programa que se contiene a sí mismo sin caer en una recursión infinita, utilizar los datos iniciales primero como bloque de instrucciones a ser interpretadas y luego como datos mismos a ser copiados resuelve elegantemente el problema. Esto es directamente análogo a la forma en que los sistemas biológicos se replican.
+
+\appendix
+\section{Código Fuente del Programa (\texttt{quine.py})}
+El siguiente programa fue escrito en Python. Al ser ejecutado mediante el intérprete, genera como salida de consola su código exacto, a la vez que realiza el cálculo de $L^3$.
+
+\begin{lstlisting}
+s = 's = %r\nL = 5\ncubo = L ** 3\nprint(s %% s)'
+L = 5
+cubo = L ** 3
+print(s % s)
+\end{lstlisting}
+
+\end{document}
