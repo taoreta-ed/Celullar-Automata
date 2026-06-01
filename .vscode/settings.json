@@ -7,6 +7,14 @@
         "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python -m py_compile main\\.py config\\.py$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python -m py_compile main\\.py simulation\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python -m py_compile main\\.py visualization\\.py simulation\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
