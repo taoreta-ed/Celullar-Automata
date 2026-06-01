@@ -32,7 +32,8 @@ class Simulation:
             occupancy_ratio: Fraction of grid initially occupied
             seed: Random seed for reproducibility
         """
-        self.grid = Grid(seed=seed)
+        self.grid = Grid(grid_size=grid_size, seed=seed)
+        self.grid_size = grid_size
         self.generation = 0
         self.initial_ant_count = 0
         
@@ -62,11 +63,11 @@ class Simulation:
             occupancy_ratio: Fraction of grid cells to initially occupy (requirement #3)
         """
         # Calculate number of ants to place
-        total_cells = GRID_SIZE * GRID_SIZE
+        total_cells = self.grid_size * self.grid_size
         num_ants_to_place = int(total_cells * occupancy_ratio)
         
         # Shuffle all positions in the grid
-        positions = [(x, y) for x in range(GRID_SIZE) for y in range(GRID_SIZE)]
+        positions = [(x, y) for x in range(self.grid_size) for y in range(self.grid_size)]
         random.shuffle(positions)
         positions = positions[:num_ants_to_place]
         
@@ -127,8 +128,8 @@ class Simulation:
             
             for adj_x, adj_y in adjacent_positions:
                 # Wrap coordinates
-                adj_x = adj_x % 500
-                adj_y = adj_y % 500
+                adj_x = adj_x % self.grid_size
+                adj_y = adj_y % self.grid_size
                 
                 queen = self.grid.get_ant(adj_x, adj_y)
                 if queen and queen.ant_type == 'queen':
@@ -146,8 +147,8 @@ class Simulation:
                                 for dy in [-1, 0, 1]:
                                     if dx == 0 and dy == 0:
                                         continue
-                                    new_x = (reproducer.x + dx) % 500
-                                    new_y = (reproducer.y + dy) % 500
+                                    new_x = (reproducer.x + dx) % self.grid_size
+                                    new_y = (reproducer.y + dy) % self.grid_size
                                     
                                     if not self.grid.occupancy[new_y, new_x]:
                                         new_ant = create_ant(new_x, new_y, new_ant_type, new_direction)
@@ -189,8 +190,8 @@ class Simulation:
             
             for adj_x, adj_y in adjacent_positions:
                 # Wrap coordinates
-                adj_x = adj_x % 500
-                adj_y = adj_y % 500
+                adj_x = adj_x % self.grid_size
+                adj_y = adj_y % self.grid_size
                 
                 queen2 = self.grid.get_ant(adj_x, adj_y)
                 if queen2 and queen2.ant_type == 'queen' and queen1 is not queen2:

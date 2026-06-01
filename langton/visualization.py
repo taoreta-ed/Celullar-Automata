@@ -91,7 +91,7 @@ class SimulationVisualizer:
             fontsize=14
         )
         
-        plt.tight_layout()
+        plt.tight_layout(rect=[0, 0, 1, 0.96])
     
     def _plot_grid(self):
         """Plot the grid with ants."""
@@ -189,13 +189,12 @@ class SimulationVisualizer:
             print("No simulation data to report.")
             return
         
-        # Create figure with 3 scenario subplots
-        fig, axes = plt.subplots(1, 3, figsize=(18, 5))
-        
+        # Create figure with 4 report subplots
+        fig, axes = plt.subplots(2, 2, figsize=(18, 12))
         generations = stats['generation']
         
         # Plot 1: Population over time (all types)
-        ax = axes[0]
+        ax = axes[0, 0]
         ax.plot(generations, stats['total_ants'], 'k-', label='Total', linewidth=2)
         ax.plot(generations, stats['queen_count'], 'gold', label='Queen')
         ax.plot(generations, stats['worker_count'], 'brown', label='Worker')
@@ -208,7 +207,7 @@ class SimulationVisualizer:
         ax.grid(True, alpha=0.3)
         
         # Plot 2: Age distribution at final generation
-        ax = axes[1]
+        ax = axes[0, 1]
         all_ants = self.simulation.grid.get_all_ants()
         if all_ants:
             ages = [ant.age for ant in all_ants]
@@ -217,9 +216,14 @@ class SimulationVisualizer:
             ax.set_xlabel('Age (iterations)')
             ax.set_ylabel('Frequency')
             ax.grid(True, alpha=0.3, axis='y')
+        else:
+            ax.text(0.5, 0.5, 'No ants remaining', ha='center', va='center')
+            ax.set_title('Age Distribution (Final State)')
+            ax.set_xticks([])
+            ax.set_yticks([])
         
         # Plot 3: Grid occupancy ratio
-        ax = axes[2]
+        ax = axes[1, 0]
         ax.plot(generations, stats['occupancy_ratio'], 'b-', linewidth=2)
         ax.fill_between(generations, stats['occupancy_ratio'], alpha=0.3)
         ax.set_title('Grid Occupancy Over Time')
@@ -228,13 +232,31 @@ class SimulationVisualizer:
         ax.set_ylim([0, 1])
         ax.grid(True, alpha=0.3)
         
-        plt.suptitle('Langton\'s Multi-Ant Simulation - Final Report', fontsize=14)
-        plt.tight_layout()
+        # Plot 4: Final grid state visualization
+        ax = axes[1, 1]
+        grid_state = self.simulation.grid.get_state_grid()
+        ax.imshow(grid_state, origin='upper')
+        ax.set_title('Final Grid State')
+        ax.set_xlabel('X')
+        ax.set_ylabel('Y')
+        
+        summary_text = (
+            f"Generations: {generations[-1]}\n"
+            f"Final ants: {stats['total_ants'][-1]}\n"
+            f"Queens: {stats['queen_count'][-1]}, Workers: {stats['worker_count'][-1]}\n"
+            f"Reproducers: {stats['reproducer_count'][-1]}, Soldiers: {stats['soldier_count'][-1]}\n"
+            f"Last scenario: {self.simulation.detect_scenario() or 'None'}"
+        )
+        fig.text(0.5, 0.04, summary_text, ha='center', fontsize=12)
+        
+        plt.suptitle('Langton\'s Multi-Ant Simulation - Final Report', fontsize=16)
+        plt.tight_layout(rect=[0, 0.03, 1, 0.96])
         
         # Save figure
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         report_path = os.path.join(self.output_dir, f'{run_name}_{timestamp}.png')
         plt.savefig(report_path, dpi=150, bbox_inches='tight')
+        plt.close(fig)
         print(f"Report saved: {report_path}")
         
         return report_path

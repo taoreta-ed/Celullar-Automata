@@ -15,23 +15,26 @@ from config import GRID_SIZE, DIRECTIONS, DIRECTION_TURNS, DIRECTION_NAMES
 class Grid:
     """Represents the simulation world."""
     
-    def __init__(self, seed=None):
+    def __init__(self, grid_size=GRID_SIZE, seed=None):
         """
         Initialize the grid.
         
         Args:
+            grid_size: Width/height of the grid.
             seed: Random seed for reproducibility
         """
+        self.grid_size = grid_size
+
         if seed is not None:
             random.seed(seed)
             np.random.seed(seed)
         
         # Cell occupancy: True if an ant is present, False otherwise
-        self.occupancy = np.zeros((GRID_SIZE, GRID_SIZE), dtype=bool)
+        self.occupancy = np.zeros((self.grid_size, self.grid_size), dtype=bool)
         
         # Langton cell state: 0=black (turn left), 1=white (turn right)
         # Initialized randomly (50% black, 50% white) per requirement #2
-        self.cell_state = np.random.choice([0, 1], size=(GRID_SIZE, GRID_SIZE))
+        self.cell_state = np.random.choice([0, 1], size=(self.grid_size, self.grid_size))
         
         # Store ants: dict mapping (x, y) -> Ant object
         # Max 1 ant per cell per requirement #7
@@ -39,7 +42,7 @@ class Grid:
     
     def is_valid_position(self, x, y):
         """Check if position is within grid bounds."""
-        return 0 <= x < GRID_SIZE and 0 <= y < GRID_SIZE
+        return 0 <= x < self.grid_size and 0 <= y < self.grid_size
     
     def get_ant(self, x, y):
         """Get ant at position (x, y), or None if empty."""
@@ -139,8 +142,8 @@ class Grid:
         
         # Calculate forward position
         dx, dy = DIRECTIONS[ant.direction]
-        new_x = (x + dx) % GRID_SIZE  # Wrap around (toroidal grid)
-        new_y = (y + dy) % GRID_SIZE
+        new_x = (x + dx) % self.grid_size  # Wrap around (toroidal grid)
+        new_y = (y + dy) % self.grid_size
         
         return (new_x, new_y)
     
@@ -175,8 +178,8 @@ class Grid:
         for direction in remaining_directions:
             ant.turn(direction)
             dx, dy = DIRECTIONS[direction]
-            test_x = (x + dx) % GRID_SIZE
-            test_y = (y + dy) % GRID_SIZE
+            test_x = (x + dx) % self.grid_size
+            test_y = (y + dy) % self.grid_size
             
             if not self.occupancy[test_y, test_x]:
                 self.move_ant(ant, test_x, test_y)
@@ -196,7 +199,7 @@ class Grid:
     
     def get_occupancy_ratio(self):
         """Return fraction of occupied cells."""
-        return np.sum(self.occupancy) / (GRID_SIZE * GRID_SIZE)
+        return np.sum(self.occupancy) / (self.grid_size * self.grid_size)
     
     def get_ant_by_type(self, ant_type):
         """Return list of all ants of a specific type."""
@@ -210,7 +213,7 @@ class Grid:
         Returns:
             2D numpy array of RGB tuples (or zeros for empty cells)
         """
-        state_grid = np.zeros((GRID_SIZE, GRID_SIZE, 3), dtype=np.uint8)
+        state_grid = np.zeros((self.grid_size, self.grid_size, 3), dtype=np.uint8)
         
         for (x, y), ant in self.ants.items():
             state_grid[y, x] = ant.color
