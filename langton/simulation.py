@@ -23,7 +23,7 @@ from ant import create_ant
 class Simulation:
     """Main simulation orchestrator."""
     
-    def __init__(self, grid_size=GRID_SIZE, occupancy_ratio=OCCUPANCY_RATIO, seed=None):
+    def __init__(self, grid_size=GRID_SIZE, occupancy_ratio=OCCUPANCY_RATIO, seed=None, toroidal=True):
         """
         Initialize the simulation.
         
@@ -32,7 +32,8 @@ class Simulation:
             occupancy_ratio: Fraction of grid initially occupied
             seed: Random seed for reproducibility
         """
-        self.grid = Grid(grid_size=grid_size, seed=seed)
+        self.grid = Grid(grid_size=grid_size, seed=seed, toroidal=toroidal)
+        self.toroidal = toroidal
         self.grid_size = grid_size
         self.generation = 0
         self.initial_ant_count = 0

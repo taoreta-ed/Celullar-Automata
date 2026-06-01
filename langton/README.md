@@ -116,7 +116,7 @@ Edit `config.py` and re-run simulations to find stable equilibrium.
 
 **Status**: Phase 1-3 complete. Phase 4 (parameter optimization) is exploratory.
 
-## Explicación detallada (en español)
+## Explicación
 
 - **Por qué esa cantidad de hormigas iniciales:** Los porcentajes iniciales están en `config.py` bajo `ANT_DENSITIES`. Se eligieron para crear dinámicas interesantes: las reinas (`queen`) son raras (1%) para que sus encuentros sean significativos; las trabajadoras (`worker`) son mayoría para mantener la población y la actividad; las reproductoras (`reproducer`) están en una proporción moderada para permitir nacimientos controlados; las soldadas (`soldier`) están en una proporción alta para aumentar interacciones y colisiones. El número inicial de hormigas se calcula como `int(N * N * occupancy * density)` donde `N` es `--grid-size`.
 
@@ -137,3 +137,25 @@ Edit `config.py` and re-run simulations to find stable equilibrium.
    - El PNG del reporte contiene: (1) dinámica de población por tipo a lo largo de las generaciones; (2) distribución de edades en el estado final; (3) evolución de la ocupancia en el tiempo; (4) una instantánea visual de la grilla final y un resumen textual con números clave y el último escenario detectado.
    - El CSV (`output/stats_*.csv`) exporta por generación las métricas: `generation`, `total_ants`, `queen_count`, `worker_count`, `reproducer_count`, `soldier_count`, `births`, `deaths`, `avg_age`, `occupancy_ratio`.
    - En consola se muestran detecciones de escenarios en tiempo real y estadísticas finales cuando la ejecución termina.
+
+## Reglas de movimiento y envoltura
+
+- **Regla de movimiento (Langton):**
+   1. La hormiga lee el color de la celda actual (oculta): negro = `0`, blanco = `1`.
+   2. Gira: si la celda es negra gira a la izquierda; si es blanca gira a la derecha.
+   3. Invierte el color de la celda actual (black ↔ white).
+   4. Avanza una celda en la nueva dirección.
+
+- **Colisiones:** si la celda objetivo está ocupada, la hormiga prueba hasta 3 direcciones alternativas (en orden aleatorio). Si todas las direcciones libres están ocupadas o fuera de los límites (cuando la envoltura está desactivada), la hormiga se queda en su sitio esta iteración.
+
+- **Envoltura toroidal:** por defecto la grilla es toroidal (los bordes se conectan): al avanzar fuera del borde la hormiga aparece por el lado opuesto. Puedes desactivar esta envoltura con la opción `--no-toroidal`; en ese modo, el borde actúa como límite y un intento de avanzar fuera de la grilla se considera bloqueado (la hormiga seguirá la lógica de colisiones para buscar otra dirección).
+
+Ejemplos:
+
+```bash
+# Ejecutar con envoltura toroidal (por defecto)
+python main.py --iterations 200 --grid-size 100 --occupancy 0.3 --report
+
+# Ejecutar SIN envoltura (bordes son límites)
+python main.py --iterations 200 --grid-size 100 --occupancy 0.3 --no-toroidal --report
+```

@@ -15,7 +15,7 @@ from config import GRID_SIZE, DIRECTIONS, DIRECTION_TURNS, DIRECTION_NAMES
 class Grid:
     """Represents the simulation world."""
     
-    def __init__(self, grid_size=GRID_SIZE, seed=None):
+    def __init__(self, grid_size=GRID_SIZE, seed=None, toroidal=True):
         """
         Initialize the grid.
         
@@ -24,6 +24,7 @@ class Grid:
             seed: Random seed for reproducibility
         """
         self.grid_size = grid_size
+        self.toroidal = toroidal
 
         if seed is not None:
             random.seed(seed)
@@ -142,9 +143,17 @@ class Grid:
         
         # Calculate forward position
         dx, dy = DIRECTIONS[ant.direction]
-        new_x = (x + dx) % self.grid_size  # Wrap around (toroidal grid)
-        new_y = (y + dy) % self.grid_size
-        
+        new_x = x + dx
+        new_y = y + dy
+
+        if self.toroidal:
+            new_x = new_x % self.grid_size
+            new_y = new_y % self.grid_size
+        else:
+            if not self.is_valid_position(new_x, new_y):
+                # Still apply turn and flip, but movement is out of bounds
+                return None
+
         return (new_x, new_y)
     
     def attempt_movement_with_collision(self, ant):
@@ -163,12 +172,14 @@ class Grid:
         current_direction = ant.direction
         
         # Apply Langton rule to get target position
-        target_x, target_y = self.apply_langton_rule(ant)
+        result = self.apply_langton_rule(ant)
         
-        # Try to move to target
-        if not self.occupancy[target_y, target_x]:
-            self.move_ant(ant, target_x, target_y)
-            return True
+        # Try to move to target (result may be None if out-of-bounds when not toroidal)
+        if result is not None:
+            target_x, target_y = result
+            if not self.occupancy[target_y, target_x]:
+                self.move_ant(ant, target_x, target_y)
+                return True
         
         # Target occupied: try 3 other random directions
         # Get remaining 3 directions
@@ -178,9 +189,16 @@ class Grid:
         for direction in remaining_directions:
             ant.turn(direction)
             dx, dy = DIRECTIONS[direction]
-            test_x = (x + dx) % self.grid_size
-            test_y = (y + dy) % self.grid_size
-            
+            test_x = x + dx
+            test_y = y + dy
+
+            if self.toroidal:
+                test_x = test_x % self.grid_size
+                test_y = test_y % self.grid_size
+            else:
+                if not self.is_valid_position(test_x, test_y):
+                    continue
+
             if not self.occupancy[test_y, test_x]:
                 self.move_ant(ant, test_x, test_y)
                 return True

@@ -47,6 +47,16 @@ Examples:
         '--visualize', '-v', action='store_true',
         help='Run interactive real-time visualization'
     )
+
+    parser.add_argument(
+        '--toroidal', dest='toroidal', action='store_true',
+        help='Enable toroidal wrap-around (default)'
+    )
+    parser.add_argument(
+        '--no-toroidal', dest='toroidal', action='store_false',
+        help='Disable toroidal wrap; edges are boundaries'
+    )
+    parser.set_defaults(toroidal=True)
     
     parser.add_argument(
         '--report', '-r', action='store_true',
@@ -96,7 +106,8 @@ Examples:
         sim = Simulation(
             grid_size=args.grid_size,
             occupancy_ratio=args.occupancy,
-            seed=seed
+            seed=seed,
+            toroidal=args.toroidal
         )
         
         if not args.quiet:

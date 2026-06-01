@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\"; python -m py_compile langton/\\*\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
