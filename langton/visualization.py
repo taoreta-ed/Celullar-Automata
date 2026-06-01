@@ -253,8 +253,12 @@ class SimulationVisualizer:
         plt.tight_layout(rect=[0, 0.03, 1, 0.96])
         
         # Save figure
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        report_path = os.path.join(self.output_dir, f'{run_name}_{timestamp}.png')
+        if run_name:
+            report_filename = f'{run_name}.png'
+        else:
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            report_filename = f'scenario_report_{timestamp}.png'
+        report_path = os.path.join(self.output_dir, report_filename)
         plt.savefig(report_path, dpi=150, bbox_inches='tight')
         plt.close(fig)
         print(f"Report saved: {report_path}")

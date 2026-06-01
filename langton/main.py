@@ -5,6 +5,7 @@ Provides CLI interface for running simulations with various options.
 
 import argparse
 import sys
+from datetime import datetime
 from simulation import Simulation
 from visualization import SimulationVisualizer
 from config import DEFAULT_ITERATIONS, RANDOM_SEED
@@ -94,6 +95,12 @@ Examples:
         print("Error: Iterations must be at least 1")
         sys.exit(1)
     
+    def build_run_name(seed, grid_size, iterations, occupancy, toroidal):
+        occupancy_str = f"{occupancy:.2f}".rstrip('0').rstrip('.')
+        toroidal_tag = 'toroidal' if toroidal else 'notor'
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        return f"S{seed}_G{grid_size}_I{iterations}_O{occupancy_str}_{toroidal_tag}_{timestamp}"
+
     # Run simulation(s)
     for batch_num in range(args.batch):
         if args.batch > 1 and not args.quiet:
@@ -109,6 +116,7 @@ Examples:
             seed=seed,
             toroidal=args.toroidal
         )
+        run_name = build_run_name(seed, args.grid_size, args.iterations, args.occupancy, args.toroidal)
         
         if not args.quiet:
             print(f"Initialized grid {args.grid_size}x{args.grid_size}")
@@ -139,12 +147,12 @@ Examples:
         if args.report:
             if not args.quiet:
                 print("Generating report...")
-            visualizer.generate_scenario_reports(run_name=f'run_{batch_num+1}')
+            visualizer.generate_scenario_reports(run_name=run_name)
         
         if args.csv:
             if not args.quiet:
                 print("Exporting statistics...")
-            visualizer.export_statistics_csv(filename=f'stats_{batch_num+1}.csv')
+            visualizer.export_statistics_csv(filename=f'{run_name}.csv')
     
     if not args.quiet:
         print("\nDone!")

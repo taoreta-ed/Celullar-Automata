@@ -1,6 +1,0 @@
-generation,total_ants,queen_count,worker_count,reproducer_count,soldier_count,births,deaths,avg_age,occupancy_ratio
-1,80,0,45,7,28,0,0,1.0,0.2
-2,80,0,45,7,28,0,0,2.0,0.2
-3,80,0,45,7,28,0,0,3.0,0.2
-4,80,0,45,7,28,0,0,4.0,0.2
-5,80,0,45,7,28,0,0,5.0,0.2
