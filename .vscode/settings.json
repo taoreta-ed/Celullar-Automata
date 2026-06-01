@@ -3,6 +3,10 @@
         "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\"; python -m py_compile langton/\\*\\.py$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python -m py_compile main\\.py config\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

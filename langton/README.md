@@ -1,6 +1,6 @@
 # Langton's Multi-Ant Simulation
 
-A Python simulation of multiple ant types following Langton's ant rules on a 500×500 grid.
+A Python simulation of multiple ant types following Langton's ant rules on a 100×100 grid by default.
 
 ## Features
 
@@ -22,12 +22,12 @@ pip install -r requirements.txt
 
 ### 2. Run a Simulation (headless, no visualization)
 ```bash
-python main.py --iterations 500 --report --csv
+python main.py --report --csv
 ```
 
 ### 3. Run with Real-Time Visualization
 ```bash
-python main.py --iterations 500 --visualize
+python main.py --visualize
 ```
 
 ### 4. Run Multiple Simulations (parameter exploration)
@@ -35,14 +35,23 @@ python main.py --iterations 500 --visualize
 python main.py --batch 3 --iterations 200 --report
 ```
 
+### 5. Reproducible Runs with Seed
+```bash
+python main.py --seed 42 --report --csv
+```
+
+The default settings are `--grid-size 100` and `--iterations 500`.
+
 ## Command-Line Options
 
 ```
 --iterations, -i       Number of iterations (default: 500)
 --seed, -s            Random seed (default: 42)
---grid-size, -g       Grid size N×N (default: 500)
+--grid-size, -g       Grid size N×N (default: 100)
 --occupancy, -o       Initial occupancy ratio 0-1 (default: 0.5)
 --visualize, -v       Run interactive visualization
+--toroidal            Enable toroidal wrap-around (default)
+--no-toroidal         Disable toroidal wrap; edges are boundaries
 --report, -r          Generate final report with plots
 --csv, -c             Export statistics to CSV
 --output-dir          Directory for reports (default: output)
@@ -75,7 +84,7 @@ Edit `config.py` and re-run simulations to find stable equilibrium.
 
 1. **Run baseline with default parameters**:
    ```bash
-   python main.py --iterations 1000 --report --csv --seed 42
+   python main.py --report --csv --seed 42
    ```
 
 2. **Analyze the report** in `output/` for which scenario occurs
@@ -98,7 +107,7 @@ Edit `config.py` and re-run simulations to find stable equilibrium.
 - Cell state: Hidden black/white (not shown to user)
 - Movement: Attempted sequentially; collisions redirected
 - Reproduction: Spawned adjacent to reproducer when rule fires
-- Performance: ~1-5 FPS real-time visualization at 500×500
+- Performance: ~1-5 FPS real-time visualization at 100×100
 
 ## Requirements (from specification)
 

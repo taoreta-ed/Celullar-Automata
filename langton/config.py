@@ -8,9 +8,9 @@ import numpy as np
 # ============================================================================
 # GRID CONFIGURATION
 # ============================================================================
-GRID_SIZE = 500  # 500x500 grid
+GRID_SIZE = 100  # 100x100 grid by default
 OCCUPANCY_RATIO = 0.5  # 50% of grid cells initially occupied (requirement #3)
-MAX_ANTS = int(GRID_SIZE * GRID_SIZE * OCCUPANCY_RATIO)  # ~125,000 max ants
+MAX_ANTS = int(GRID_SIZE * GRID_SIZE * OCCUPANCY_RATIO)
 
 # ============================================================================
 # ANT TYPE DENSITIES (requirement #1 - initial distribution)

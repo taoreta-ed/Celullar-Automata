@@ -34,8 +34,8 @@ Examples:
     )
     
     parser.add_argument(
-        '--grid-size', '-g', type=int, default=500,
-        help='Grid size (N x N, default: 500)'
+        '--grid-size', '-g', type=int, default=100,
+        help='Grid size (N x N, default: 100)'
     )
     
     parser.add_argument(
