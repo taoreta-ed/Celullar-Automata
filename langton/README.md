@@ -115,3 +115,25 @@ Edit `config.py` and re-run simulations to find stable equilibrium.
 ---
 
 **Status**: Phase 1-3 complete. Phase 4 (parameter optimization) is exploratory.
+
+## Explicación detallada (en español)
+
+- **Por qué esa cantidad de hormigas iniciales:** Los porcentajes iniciales están en `config.py` bajo `ANT_DENSITIES`. Se eligieron para crear dinámicas interesantes: las reinas (`queen`) son raras (1%) para que sus encuentros sean significativos; las trabajadoras (`worker`) son mayoría para mantener la población y la actividad; las reproductoras (`reproducer`) están en una proporción moderada para permitir nacimientos controlados; las soldadas (`soldier`) están en una proporción alta para aumentar interacciones y colisiones. El número inicial de hormigas se calcula como `int(N * N * occupancy * density)` donde `N` es `--grid-size`.
+
+- **¿Qué es la ocupancia?** La *ocupancia* es la fracción de celdas del tablero que están ocupadas por hormigas en un instante dado. Matemáticamente:
+
+   ocupancia = (celdas ocupadas) / (N * N)
+
+   - Rango: 0 → 1 (por ejemplo, `0.5` = 50%).
+   - Se controla inicialmente con `--occupancy` o `config.py` → `OCCUPANCY_RATIO`.
+   - Efecto: mayor ocupancia implica más colisiones y riesgo de sobrepoblación; menor ocupancia puede llevar al aislamiento o extinción.
+
+- **Escenarios y cómo los determinamos:** La detección de escenarios utiliza umbrales en `config.py`.
+   - *Aislamiento* (isolation): la población total cae por debajo de `ISOLATION_THRESHOLD` (p. ej. 10%) del tamaño inicial. Se detecta comparando `total_ants` contra `initial_ants * ISOLATION_THRESHOLD`.
+   - *Sobrepoblación* (overpopulation): la ocupancia de la grilla supera `OVERPOPULATION_GRID_THRESHOLD` (p. ej. 80%) Y la tasa de muertes recientes supera `OVERPOPULATION_DEATH_RATE` (p. ej. 15%). La tasa de muerte se mide como `deaths_this_iter / ants_previous_iter`.
+   - *Estado estable* (stable): la población se mantiene dentro de ±`STABLE_POPULATION_VARIANCE` durante `STABLE_GENERATIONS_REQUIRED` generaciones consecutivas (p. ej. ±5% durante 50 generaciones).
+
+- **Qué vemos en los reportes y CSVs:**
+   - El PNG del reporte contiene: (1) dinámica de población por tipo a lo largo de las generaciones; (2) distribución de edades en el estado final; (3) evolución de la ocupancia en el tiempo; (4) una instantánea visual de la grilla final y un resumen textual con números clave y el último escenario detectado.
+   - El CSV (`output/stats_*.csv`) exporta por generación las métricas: `generation`, `total_ants`, `queen_count`, `worker_count`, `reproducer_count`, `soldier_count`, `births`, `deaths`, `avg_age`, `occupancy_ratio`.
+   - En consola se muestran detecciones de escenarios en tiempo real y estadísticas finales cuando la ejecución termina.
