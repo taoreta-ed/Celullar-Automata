@@ -15,14 +15,82 @@
 \maketitle
 
 \section{Introducción}
-En este documento se registran las observaciones de la simulación de hormigas basada en las reglas de Langton y el comportamiento de los distintos tipos de hormigas.
+En este documento se registran las observaciones y fundamentos técnicos de la simulación de hormigas basada en las reglas de Langton y el comportamiento de los distintos tipos de hormigas.
 
-\section{Metodología}
+\section{Fundamento del programa}
+La simulación está diseñada para evaluar cómo interactúan cuatro tipos de hormigas en una grilla con reglas de movimiento de Langton y ciclo de vida controlado.
+
+\subsection{Reglas principales}
 \begin{itemize}
-  \item Se utilizó una grilla cuadrada con ocupación inicial del 50\%.
-  \item Las hormigas se distribuyen con las siguientes densidades iniciales: reina (1\%), trabajadoras (55\%), reproductoras (9\%), soldado (35\%).
-  \item Las celdas de color se manejan internamente y no se muestran en la salida visual.
-  \item La vida útil de cada hormiga es de 80 iteraciones.
+  \item Cada hormiga vive hasta 80 iteraciones.
+  \item El estado de cada celda es negro/blanco, pero ese estado se maneja internamente y no se muestra en la visualización.
+  \item En celda negra la hormiga gira a la izquierda; en celda blanca gira a la derecha.
+  \item Después de girar, la hormiga invierte el color de la celda y avanza una celda.
+  \item Si la celda destino está ocupada, la hormiga prueba hasta tres direcciones alternativas de forma aleatoria.
+  \item Si todas las direcciones libres están ocupadas, la hormiga espera y no se mueve en esa iteración.
+  \item Una hormiga nueva nace cuando una reproductora y una reina se enfrentan en direcciones opuestas y se cumple la probabilidad de reproducción.
+  \item Se detectan escenarios de aislamiento, sobrepoblación y estabilidad con umbrales de población y ocupación.
+\end{itemize}
+
+\section{Estructura del código}
+La aplicación está organizada en módulos claros que separan la lógica de configuración, el modelo de datos, la simulación y la visualización.
+
+\subsection{Configuración}
+El archivo \texttt{config.py} contiene:
+\begin{itemize}
+  \item proporciones iniciales de cada tipo de hormiga,
+  \item lifespan de 80 iteraciones,
+  \item probabilidades de reproducción y de muerte entre reinas,
+  \item umbrales para los tres escenarios detectados.
+\end{itemize}
+
+\subsection{Modelo de hormigas}
+El módulo \texttt{ant.py} define la clase base \texttt{Ant} y las subclases:
+\begin{itemize}
+  \item \texttt{Queen},
+  \item \texttt{Worker},
+  \item \texttt{Reproducer},
+  \item \texttt{Soldier}.
+\end{itemize}
+Cada hormiga mantiene su posición, dirección, edad y color para la visualización.
+
+\subsection{Grilla y reglas de Langton}
+El módulo \texttt{grid.py} implementa:
+\begin{itemize}
+  \item la grilla de ocupación,
+  \item el estado oculto de las celdas (0 = negro, 1 = blanco),
+  \item el movimiento Langton con giro y volteo de color,
+  \item la colocación, movimiento y eliminación de hormigas,
+  \item la lógica de colisiones y reintentos.
+\end{itemize}
+
+\subsection{Simulación}
+El módulo \texttt{simulation.py} coordina:
+\begin{itemize}
+  \item inicialización de la grilla con ocupación del 50\%,
+  \item ciclo de iteración: movimiento, reproducción, envejecimiento y muerte,
+  \item el manejo de nacimientos y encuentros de reinas,
+  \item el registro de estadísticas por generación.
+\end{itemize}
+
+\subsection{Visualización y reporte}
+El módulo \texttt{visualization.py} genera:
+\begin{itemize}
+  \item animación en tiempo real si se usa \texttt{--visualize},
+  \item reporte final con gráficos de población y ocupación,
+  \item imágenes separadas del estado inicial y final,
+  \item resumen de resultados en un archivo de texto.
+\end{itemize}
+
+\subsection{Entrada principal}
+El archivo \texttt{main.py} expone el CLI con opciones para:
+\begin{itemize}
+  \item número de iteraciones,
+  \item tamaño de la grilla,
+  \item ocupación inicial,
+  \item modo toroidal,
+  \item generación de reportes y CSV,
+  \item registro de salida en archivo.
 \end{itemize}
 
 \section{Escenarios}
@@ -38,10 +106,10 @@ Aquí se incluyen los resultados de la primera ejecución, las métricas de pobl
 
 \section{Discusión}
 \subsection{Colisiones}
-Describir qué sucede cuando una celda está ocupada y otra hormiga intenta acceder a ella.
+La colisión se maneja mediante el reintento en otras tres direcciones cuando la celda destino está ocupada. Si todas las direcciones están ocupadas, la hormiga permanece en su sitio y la iteración termina para ella.
 
 \subsection{Nacimiento}
-Describir en qué posición aparece una hormiga nueva cuando una reina y una reproductora cumplen la condición de reproducción.
+Cuando una reina y una reproductora se encuentran en direcciones opuestas, el programa selecciona una celda libre adyacente para crear la nueva hormiga. Si existe una posición adyacente compartida entre ambos, esa posición tiene prioridad.
 
 \section{Conclusiones}
 Documentar el comportamiento observado y las decisiones de ajuste de parámetros para estabilizar el sistema.
@@ -51,6 +119,7 @@ Documentar el comportamiento observado y las decisiones de ajuste de parámetros
   \item Analizar múltiples ejecuciones con semillas diferentes.
   \item Comparar los resultados de los tres escenarios.
   \item Ajustar las probabilidades y densidades para lograr estabilidad.
+  \item Registrar y comparar los resúmenes de los archivos \texttt{summary.txt} generados.
 \end{itemize}
 
 \end{document}

@@ -1,0 +1,5 @@
+Dependiendo del grid que se elija son la cantidad de configuraciones iniciales posibles, considerando que se cumplen los porcentajes de 1, 9 y tantos porciento para los tipos de hormigas
+
+Al utilizar una semilla, que puede ser positiva y negativa, hay una probabilidad de que haya dos semillas o más que nos den la misma configuración inicial
+
+La simulación o el resultado también es dependiente del tamaño del grid, puesto que al ser toroidal, no puede existir una misma configuración inicial para dos tamaños de grid diferentes

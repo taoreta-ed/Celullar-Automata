@@ -34,7 +34,7 @@ while ($true) {
 
     $processInfo = New-Object System.Diagnostics.ProcessStartInfo
     $processInfo.FileName = 'python'
-    $processInfo.Arguments = "main.py -s $seed -g 300"
+    $processInfo.Arguments = "main.py -s $seed"
     $processInfo.WorkingDirectory = $scriptDir # ◄--- FIJA EL DIRECTORIO DE TRABAJO AQUÍ
     $processInfo.RedirectStandardOutput = $true
     $processInfo.RedirectStandardError = $true
