@@ -1,0 +1,1711 @@
+﻿Starting seed search session at 2026-06-04 12:08:03Z
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 300x300
+Initial ants: 45000
+Occupancy: 50.00%
+Running simulation for 500 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Detected scenario: isolation
+
+Done!
+

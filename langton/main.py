@@ -4,6 +4,7 @@ Provides CLI interface for running simulations with various options.
 """
 
 import argparse
+import os
 import sys
 from datetime import datetime
 from simulation import Simulation
@@ -41,7 +42,7 @@ Examples:
     
     parser.add_argument(
         '--occupancy', '-o', type=float, default=0.5,
-        help='Initial occupancy ratio (0-1, default: 0.5 for 50%)'
+        help='Initial occupancy ratio (0-1, default: 0.5 for 50%%)'
     )
     
     parser.add_argument(
@@ -80,15 +81,34 @@ Examples:
     )
     
     parser.add_argument(
+        '--log-file', type=str, default=None,
+        help='Optional file to save console output summary'
+    )
+    
+    parser.add_argument(
         '--quiet', '-q', action='store_true',
         help='Suppress status messages'
     )
     
     args = parser.parse_args()
     
+    # Open log file if requested
+    log_file_handle = None
+    if args.log_file:
+        os.makedirs(os.path.dirname(args.log_file) or '.', exist_ok=True)
+        log_file_handle = open(args.log_file, 'w', encoding='utf-8')
+
+    def log(message=''):
+        if not args.quiet:
+            print(message)
+        if log_file_handle is not None:
+            log_file_handle.write(f"{message}\n")
+
     # Validate arguments
     if not (0 < args.occupancy <= 1):
-        print("Error: Occupancy must be between 0 and 1")
+        log("Error: Occupancy must be between 0 and 1")
+        if log_file_handle is not None:
+            log_file_handle.close()
         sys.exit(1)
     
     if args.iterations < 1:
@@ -103,10 +123,10 @@ Examples:
 
     # Run simulation(s)
     for batch_num in range(args.batch):
-        if args.batch > 1 and not args.quiet:
-            print(f"\n{'='*60}")
-            print(f"Run {batch_num + 1}/{args.batch}")
-            print(f"{'='*60}")
+        if args.batch > 1:
+            log(f"\n{'='*60}")
+            log(f"Run {batch_num + 1}/{args.batch}")
+            log(f"{'='*60}")
         
         # Create simulation
         seed = args.seed + batch_num if args.batch > 1 else args.seed
@@ -118,44 +138,39 @@ Examples:
         )
         run_name = build_run_name(seed, args.grid_size, args.iterations, args.occupancy, args.toroidal)
         
-        if not args.quiet:
-            print(f"Initialized grid {args.grid_size}x{args.grid_size}")
-            print(f"Initial ants: {sim.initial_ant_count}")
-            print(f"Occupancy: {sim.grid.get_occupancy_ratio():.2%}")
+        log(f"Initialized grid {args.grid_size}x{args.grid_size}")
+        log(f"Initial ants: {sim.initial_ant_count}")
+        log(f"Occupancy: {sim.grid.get_occupancy_ratio():.2%}")
         
         # Create visualizer
         visualizer = SimulationVisualizer(sim, output_dir=args.output_dir)
         
         # Run visualization or headless simulation
         if args.visualize:
-            if not args.quiet:
-                print(f"Starting interactive visualization for {args.iterations} iterations...")
+            log(f"Starting interactive visualization for {args.iterations} iterations...")
             visualizer.run_interactive_animation(num_generations=args.iterations)
         else:
-            if not args.quiet:
-                print(f"Running simulation for {args.iterations} iterations...")
+            log(f"Running simulation for {args.iterations} iterations...")
             sim.run(args.iterations)
             
-            if not args.quiet:
-                final_scenario = sim.detect_scenario()
-                print(f"Final ant count: {sim.grid.get_ant_count()}")
-                print(f"Final occupancy: {sim.grid.get_occupancy_ratio():.2%}")
-                if final_scenario:
-                    print(f"Detected scenario: {final_scenario}")
+            final_scenario = sim.detect_scenario()
+            log(f"Final ant count: {sim.grid.get_ant_count()}")
+            log(f"Final occupancy: {sim.grid.get_occupancy_ratio():.2%}")
+            if final_scenario:
+                log(f"Detected scenario: {final_scenario}")
         
         # Generate reports
         if args.report:
-            if not args.quiet:
-                print("Generating report...")
+            log("Generating report...")
             visualizer.generate_scenario_reports(run_name=run_name)
         
         if args.csv:
-            if not args.quiet:
-                print("Exporting statistics...")
+            log("Exporting statistics...")
             visualizer.export_statistics_csv(filename=f'{run_name}.csv')
     
-    if not args.quiet:
-        print("\nDone!")
+    log("\nDone!")
+    if log_file_handle is not None:
+        log_file_handle.close()
 
 
 if __name__ == '__main__':

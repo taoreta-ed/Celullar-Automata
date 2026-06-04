@@ -33,6 +33,9 @@ class SimulationVisualizer:
         # Create output directory
         os.makedirs(output_dir, exist_ok=True)
         
+        # Capture initial grid state before the simulation runs
+        self.initial_grid_state = np.copy(self.simulation.grid.get_state_grid())
+        
         # Animation figure
         self.fig = None
         self.axes = None
@@ -176,6 +179,40 @@ class SimulationVisualizer:
         
         plt.show()
     
+    def save_grid_snapshot(self, grid_state, filename):
+        """Save a grid snapshot image."""
+        output_path = os.path.join(self.output_dir, filename)
+        plt.imsave(output_path, grid_state)
+        return output_path
+    
+    def export_summary_text(self, run_name='scenario_report'):
+        """Export a simple textual summary of the simulation results."""
+        stats = self.simulation.stats
+        summary_path = os.path.join(self.output_dir, f'{run_name}_summary.txt')
+        final_generation = stats['generation'][-1] if stats['generation'] else 0
+        final_total = stats['total_ants'][-1] if stats['total_ants'] else 0
+        final_queens = stats['queen_count'][-1] if stats['queen_count'] else 0
+        final_workers = stats['worker_count'][-1] if stats['worker_count'] else 0
+        final_reproducers = stats['reproducer_count'][-1] if stats['reproducer_count'] else 0
+        final_soldiers = stats['soldier_count'][-1] if stats['soldier_count'] else 0
+        final_occupancy = stats['occupancy_ratio'][-1] if stats['occupancy_ratio'] else 0
+        final_scenario = self.simulation.detect_scenario() or 'None'
+        
+        with open(summary_path, 'w', encoding='utf-8') as f:
+            f.write('Langton Multi-Ant Simulation Summary\n')
+            f.write('=================================\n')
+            f.write(f'Run name: {run_name}\n')
+            f.write(f'Generations: {final_generation}\n')
+            f.write(f'Final total ants: {final_total}\n')
+            f.write(f'Final queens: {final_queens}\n')
+            f.write(f'Final workers: {final_workers}\n')
+            f.write(f'Final reproducers: {final_reproducers}\n')
+            f.write(f'Final soldiers: {final_soldiers}\n')
+            f.write(f'Final occupancy ratio: {final_occupancy:.2%}\n')
+            f.write(f'Detected scenario: {final_scenario}\n')
+        print(f'Summary exported: {summary_path}')
+        return summary_path
+    
     def generate_scenario_reports(self, run_name='scenario_report'):
         """
         Generate final report with 3 scenario plots.
@@ -189,12 +226,27 @@ class SimulationVisualizer:
             print("No simulation data to report.")
             return
         
-        # Create figure with 4 report subplots
+        # Create figure with 4 report subplots including initial/final snapshots
         fig, axes = plt.subplots(2, 2, figsize=(18, 12))
         generations = stats['generation']
         
-        # Plot 1: Population over time (all types)
+        # Plot 1: Initial grid state
         ax = axes[0, 0]
+        ax.imshow(self.initial_grid_state, origin='upper')
+        ax.set_title('Initial Grid State')
+        ax.set_xlabel('X')
+        ax.set_ylabel('Y')
+        
+        # Plot 2: Final grid state visualization
+        ax = axes[0, 1]
+        final_grid_state = self.simulation.grid.get_state_grid()
+        ax.imshow(final_grid_state, origin='upper')
+        ax.set_title('Final Grid State')
+        ax.set_xlabel('X')
+        ax.set_ylabel('Y')
+        
+        # Plot 3: Population dynamics over time
+        ax = axes[1, 0]
         ax.plot(generations, stats['total_ants'], 'k-', label='Total', linewidth=2)
         ax.plot(generations, stats['queen_count'], 'gold', label='Queen')
         ax.plot(generations, stats['worker_count'], 'brown', label='Worker')
@@ -203,27 +255,11 @@ class SimulationVisualizer:
         ax.set_title('Population Dynamics')
         ax.set_xlabel('Generation')
         ax.set_ylabel('Count')
-        ax.legend()
+        ax.legend(fontsize=8)
         ax.grid(True, alpha=0.3)
         
-        # Plot 2: Age distribution at final generation
-        ax = axes[0, 1]
-        all_ants = self.simulation.grid.get_all_ants()
-        if all_ants:
-            ages = [ant.age for ant in all_ants]
-            ax.hist(ages, bins=30, edgecolor='black', alpha=0.7, color='skyblue')
-            ax.set_title('Age Distribution (Final State)')
-            ax.set_xlabel('Age (iterations)')
-            ax.set_ylabel('Frequency')
-            ax.grid(True, alpha=0.3, axis='y')
-        else:
-            ax.text(0.5, 0.5, 'No ants remaining', ha='center', va='center')
-            ax.set_title('Age Distribution (Final State)')
-            ax.set_xticks([])
-            ax.set_yticks([])
-        
-        # Plot 3: Grid occupancy ratio
-        ax = axes[1, 0]
+        # Plot 4: Occupancy ratio over time
+        ax = axes[1, 1]
         ax.plot(generations, stats['occupancy_ratio'], 'b-', linewidth=2)
         ax.fill_between(generations, stats['occupancy_ratio'], alpha=0.3)
         ax.set_title('Grid Occupancy Over Time')
@@ -232,27 +268,19 @@ class SimulationVisualizer:
         ax.set_ylim([0, 1])
         ax.grid(True, alpha=0.3)
         
-        # Plot 4: Final grid state visualization
-        ax = axes[1, 1]
-        grid_state = self.simulation.grid.get_state_grid()
-        ax.imshow(grid_state, origin='upper')
-        ax.set_title('Final Grid State')
-        ax.set_xlabel('X')
-        ax.set_ylabel('Y')
-        
         summary_text = (
             f"Generations: {generations[-1]}\n"
             f"Final ants: {stats['total_ants'][-1]}\n"
             f"Queens: {stats['queen_count'][-1]}, Workers: {stats['worker_count'][-1]}\n"
             f"Reproducers: {stats['reproducer_count'][-1]}, Soldiers: {stats['soldier_count'][-1]}\n"
-            f"Last scenario: {self.simulation.detect_scenario() or 'None'}"
+            f"Final occupancy: {stats['occupancy_ratio'][-1]:.2%}\n"
+            f"Detected scenario: {self.simulation.detect_scenario() or 'None'}"
         )
-        fig.text(0.5, 0.04, summary_text, ha='center', fontsize=12)
+        fig.text(0.5, 0.02, summary_text, ha='center', fontsize=12)
         
-        plt.suptitle('Langton\'s Multi-Ant Simulation - Final Report', fontsize=16)
-        plt.tight_layout(rect=[0, 0.03, 1, 0.96])
+        plt.suptitle('Langton\'s Multi-Ant Simulation - Initial and Final Report', fontsize=16)
+        plt.tight_layout(rect=[0, 0.05, 1, 0.96])
         
-        # Save figure
         if run_name:
             report_filename = f'{run_name}.png'
         else:
@@ -262,6 +290,15 @@ class SimulationVisualizer:
         plt.savefig(report_path, dpi=150, bbox_inches='tight')
         plt.close(fig)
         print(f"Report saved: {report_path}")
+        
+        # Save separate initial and final snapshots for easier comparison
+        initial_snapshot = self.save_grid_snapshot(self.initial_grid_state, f'{run_name}_initial.png')
+        final_snapshot = self.save_grid_snapshot(final_grid_state, f'{run_name}_final.png')
+        print(f"Initial grid snapshot saved: {initial_snapshot}")
+        print(f"Final grid snapshot saved: {final_snapshot}")
+        
+        # Generate a summary text file with key metrics
+        self.export_summary_text(run_name)
         
         return report_path
     

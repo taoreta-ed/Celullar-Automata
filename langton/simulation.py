@@ -138,26 +138,47 @@ class Simulation:
                     if reproducer.direction == OPPOSITE_DIRECTIONS.get(queen.direction):
                         # 50% probability to reproduce
                         if random.random() < REPRODUCTION_PROBABILITY:
-                            # Spawn new ant nearby (within 1 cell of reproducer)
+                            # Spawn new ant in an adjacent free cell.
+                            # Prefer positions that are adjacent to both queen and reproducer when possible.
                             new_ant_type = random.choice(['queen', 'worker', 'reproducer', 'soldier'])
                             new_direction = random.choice(['N', 'E', 'S', 'W'])
                             
-                            # Try to place new ant in a nearby free cell
+                            def neighbor_positions(x, y):
+                                positions = []
+                                for dx in [-1, 0, 1]:
+                                    for dy in [-1, 0, 1]:
+                                        if dx == 0 and dy == 0:
+                                            continue
+                                        nx = (x + dx) % self.grid_size
+                                        ny = (y + dy) % self.grid_size
+                                        positions.append((nx, ny))
+                                return positions
+                            
+                            reproducer_neighbors = set(neighbor_positions(reproducer.x, reproducer.y))
+                            queen_neighbors = set(neighbor_positions(queen.x, queen.y))
+                            shared_neighbors = list(reproducer_neighbors & queen_neighbors)
+                            candidate_positions = []
+                            
+                            if shared_neighbors:
+                                random.shuffle(shared_neighbors)
+                                candidate_positions.extend(shared_neighbors)
+                            
+                            remaining = list(reproducer_neighbors - set(candidate_positions))
+                            random.shuffle(remaining)
+                            candidate_positions.extend(remaining)
+                            
+                            # As a fallback, allow positions adjacent to the queen as well
+                            fallback = list(queen_neighbors - set(candidate_positions))
+                            random.shuffle(fallback)
+                            candidate_positions.extend(fallback)
+                            
                             placed = False
-                            for dx in [-1, 0, 1]:
-                                for dy in [-1, 0, 1]:
-                                    if dx == 0 and dy == 0:
-                                        continue
-                                    new_x = (reproducer.x + dx) % self.grid_size
-                                    new_y = (reproducer.y + dy) % self.grid_size
-                                    
-                                    if not self.grid.occupancy[new_y, new_x]:
-                                        new_ant = create_ant(new_x, new_y, new_ant_type, new_direction)
-                                        self.grid.place_ant(new_ant, new_x, new_y)
-                                        births += 1
-                                        placed = True
-                                        break
-                                if placed:
+                            for new_x, new_y in candidate_positions:
+                                if not self.grid.occupancy[new_y, new_x]:
+                                    new_ant = create_ant(new_x, new_y, new_ant_type, new_direction)
+                                    self.grid.place_ant(new_ant, new_x, new_y)
+                                    births += 1
+                                    placed = True
                                     break
         
         # Phase 3: Aging

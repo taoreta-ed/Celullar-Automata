@@ -1,0 +1,56 @@
+% Observaciones de la simulación de hormigas Langton
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Observaciones de la simulación de hormigas}
+\author{Equipo de Desarrollo}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+En este documento se registran las observaciones de la simulación de hormigas basada en las reglas de Langton y el comportamiento de los distintos tipos de hormigas.
+
+\section{Metodología}
+\begin{itemize}
+  \item Se utilizó una grilla cuadrada con ocupación inicial del 50\%.
+  \item Las hormigas se distribuyen con las siguientes densidades iniciales: reina (1\%), trabajadoras (55\%), reproductoras (9\%), soldado (35\%).
+  \item Las celdas de color se manejan internamente y no se muestran en la salida visual.
+  \item La vida útil de cada hormiga es de 80 iteraciones.
+\end{itemize}
+
+\section{Escenarios}
+Se debe analizar y documentar los siguientes escenarios:
+\begin{enumerate}
+  \item Decesos por aislamiento
+  \item Decesos por sobrepoblación
+  \item Sistema estable
+\end{enumerate}
+
+\section{Resultados iniciales}
+Aquí se incluyen los resultados de la primera ejecución, las métricas de población y las imágenes iniciales y finales.
+
+\section{Discusión}
+\subsection{Colisiones}
+Describir qué sucede cuando una celda está ocupada y otra hormiga intenta acceder a ella.
+
+\subsection{Nacimiento}
+Describir en qué posición aparece una hormiga nueva cuando una reina y una reproductora cumplen la condición de reproducción.
+
+\section{Conclusiones}
+Documentar el comportamiento observado y las decisiones de ajuste de parámetros para estabilizar el sistema.
+
+\section{Próximos pasos}
+\begin{itemize}
+  \item Analizar múltiples ejecuciones con semillas diferentes.
+  \item Comparar los resultados de los tres escenarios.
+  \item Ajustar las probabilidades y densidades para lograr estabilidad.
+\end{itemize}
+
+\end{document}

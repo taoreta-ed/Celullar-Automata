@@ -7,9 +7,26 @@ Set-Strictmode -Version Latest
 $scriptDir = $PSScriptRoot
 Set-Location $scriptDir
 
+$logDir = Join-Path $scriptDir 'output\logs'
+if (-not (Test-Path $logDir)) {
+    New-Item -ItemType Directory -Path $logDir | Out-Null
+}
+
 function Get-RandomSeed {
     return Get-Random -Minimum 1 -Maximum 1000000000
 }
+
+function Write-Log {
+    param (
+        [string]$Text,
+        [string]$Path
+    )
+    Add-Content -Path $Path -Value $Text
+}
+
+$sessionTimestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+$logFile = Join-Path $logDir "find_seed_$sessionTimestamp.txt"
+"Starting seed search session at $(Get-Date -Format 'u')" | Out-File -FilePath $logFile -Encoding utf8
 
 while ($true) {
     $seed = Get-RandomSeed
@@ -29,20 +46,30 @@ while ($true) {
     $stderr = $process.StandardError.ReadToEnd()
     $process.WaitForExit()
 
-    Write-Host $stdout
+    if ($stdout) {
+        Write-Host $stdout
+        Write-Log $stdout $logFile
+    }
     if ($stderr) {
         Write-Host "ERROR:" -ForegroundColor Red
         Write-Host $stderr
+        Write-Log "ERROR: $stderr" $logFile
     }
 
     $match = [regex]::Match($stdout, 'Final occupancy:\s*([0-9]+\.[0-9]{2})%')
     if ($match.Success) {
         $occupancy = [decimal]$match.Groups[1].Value
         if ($occupancy -ne 0.00) {
-            Write-Host "`n➡ Seed encontrada: $seed" -ForegroundColor Green
+            $foundMessage = "`n➡ Seed encontrada: $seed"
+            Write-Host $foundMessage -ForegroundColor Green
             Write-Host "➡ Final occupancy: $occupancy%" -ForegroundColor Green
+            Write-Log $foundMessage $logFile
+            Write-Log "➡ Final occupancy: $occupancy%" $logFile
 
-            Write-Host "Reejecutando con --report para generar el informe..." -ForegroundColor Cyan
+            $reportMessage = "Reejecutando con --report para generar el informe..."
+            Write-Host $reportMessage -ForegroundColor Cyan
+            Write-Log $reportMessage $logFile
+
             $reportProcessInfo = New-Object System.Diagnostics.ProcessStartInfo
             $reportProcessInfo.FileName = 'python'
             $reportProcessInfo.Arguments = "main.py -s $seed --report"
@@ -57,10 +84,14 @@ while ($true) {
             $reportStderr = $reportProcess.StandardError.ReadToEnd()
             $reportProcess.WaitForExit()
 
-            Write-Host $reportStdout
+            if ($reportStdout) {
+                Write-Host $reportStdout
+                Write-Log $reportStdout $logFile
+            }
             if ($reportStderr) {
                 Write-Host "ERROR en reporte:" -ForegroundColor Red
                 Write-Host $reportStderr
+                Write-Log "ERROR en reporte: $reportStderr" $logFile
             }
 
             break
@@ -72,4 +103,6 @@ while ($true) {
     Start-Sleep -Seconds 1
 }
 
-Write-Host "Script terminado." -ForegroundColor White
+$endMessage = "Script terminado. Log guardado en: $logFile"
+Write-Host $endMessage -ForegroundColor White
+Write-Log $endMessage $logFile

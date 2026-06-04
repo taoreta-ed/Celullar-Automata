@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python -m py_compile main\\.py simulation\\.py visualization\\.py ; python main\\.py --help$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python main\\.py --iterations 2 --report --output-dir output/test --log-file output/test/run\\.txt$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

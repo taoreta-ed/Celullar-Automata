@@ -55,6 +55,7 @@ The default settings are `--grid-size 100` and `--iterations 500`.
 --report, -r          Generate final report with plots
 --csv, -c             Export statistics to CSV
 --output-dir          Directory for reports (default: output)
+--log-file            Optional file to save summary output from the run
 --batch, -b           Number of simulations to run
 --quiet, -q           Suppress status messages
 ```
