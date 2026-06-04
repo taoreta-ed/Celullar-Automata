@@ -3,3 +3,5 @@ Dependiendo del grid que se elija son la cantidad de configuraciones iniciales p
 Al utilizar una semilla, que puede ser positiva y negativa, hay una probabilidad de que haya dos semillas o más que nos den la misma configuración inicial
 
 La simulación o el resultado también es dependiente del tamaño del grid, puesto que al ser toroidal, no puede existir una misma configuración inicial para dos tamaños de grid diferentes
+
+* revisar si las hormigas se reproducen como deberían: basta con que una reina y una reproductora se encuentren en casillas vecinas (no diagonales)
