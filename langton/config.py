@@ -85,7 +85,7 @@ QUEEN_ENCOUNTER_OLD_AGE_PROB = 0.2  # Age >= 60: 20% survival for both
 # ============================================================================
 # SIMULATION PARAMETERS
 # ============================================================================
-DEFAULT_ITERATIONS = 500  # Default number of iterations to run
+DEFAULT_ITERATIONS = 300  # Default number of iterations to run
 RANDOM_SEED = 42  # For reproducibility during development
 
 # ============================================================================

@@ -45,7 +45,7 @@ The default settings are `--grid-size 100` and `--iterations 500`.
 ## Command-Line Options
 
 ```
---iterations, -i       Number of iterations (default: 500)
+--iterations, -i       Number of iterations (default: 300)
 --seed, -s            Random seed (default: 42)
 --grid-size, -g       Grid size N×N (default: 100)
 --occupancy, -o       Initial occupancy ratio 0-1 (default: 0.5)
