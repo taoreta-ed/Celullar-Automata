@@ -7,7 +7,7 @@ A Python simulation of multiple ant types following Langton's ant rules on a 100
 - **4 Ant Types**: Queens (1%), Workers (55%), Reproducers (9%), Soldiers (35%)
 - **Langton Rules**: Hidden black/white cell states govern ant behavior
 - **Reproduction**: Reproducers + Queens with opposite facing directions breed
-- **Lifespan**: Each ant lives for 80 iterations
+- **Lifespan**: Each ant lives for 80 iterations; population at generation 80 is recorded for reporting
 - **Queen Encounters**: Age-dependent survival rules
 - **Collision Handling**: Ants redirect when cells are occupied
 - **Real-time Visualization**: Live matplotlib animation with statistics
@@ -22,8 +22,10 @@ pip install -r requirements.txt
 
 ### 2. Run a Simulation (headless, no visualization)
 ```bash
-python main.py --report --csv
+python main.py --iterations 300 --report --csv --output-dir output/run1
 ```
+
+> Note: If the simulation runs at least 80 iterations, the report will record the total number of ants at generation 80 for comparison across runs.
 
 ### 3. Run with Real-Time Visualization
 ```bash
@@ -40,7 +42,7 @@ python main.py --batch 3 --iterations 200 --report
 python main.py --seed 42 --report --csv
 ```
 
-The default settings are `--grid-size 100` and `--iterations 500`.
+The default settings are `--grid-size 100` and `--iterations 300`.
 
 ## Command-Line Options
 
@@ -101,6 +103,7 @@ Edit `config.py` and re-run simulations to find stable equilibrium.
 - **PNG Reports**: Population dynamics, age distribution, occupancy ratio
 - **CSV Statistics**: Detailed per-iteration counts and metrics
 - **Console Output**: Real-time scenario detection and statistics
+- **Generation 80 Metric**: When the run reaches at least 80 iterations, the summary includes the total number of ants at that generation
 
 ## Implementation Notes
 

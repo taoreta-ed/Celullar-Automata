@@ -7,6 +7,14 @@
         "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python main\\.py --iterations 2 --report --output-dir output/test --log-file output/test/run\\.txt$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python main\\.py -s 1 -i 10 --report --csv --output-dir output/test_run$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python main\\.py -s 1 -i 300 --report --csv --output-dir output/test_run2$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

@@ -209,6 +209,10 @@ class SimulationVisualizer:
             f.write(f'Final reproducers: {final_reproducers}\n')
             f.write(f'Final soldiers: {final_soldiers}\n')
             f.write(f'Final occupancy ratio: {final_occupancy:.2%}\n')
+            if len(stats['generation']) >= 80:
+                f.write(f'Ants at generation 80: {stats['total_ants'][79]}\n')
+            else:
+                f.write(f'Ants at generation 80: n/a (only {final_generation} generations)\n')
             f.write(f'Detected scenario: {final_scenario}\n')
         print(f'Summary exported: {summary_path}')
         return summary_path
@@ -268,12 +272,18 @@ class SimulationVisualizer:
         ax.set_ylim([0, 1])
         ax.grid(True, alpha=0.3)
         
+        iteration_80_text = (
+            f"Ants at generation 80: {stats['total_ants'][79]}\n"
+            if len(generations) >= 80 else
+            f"Ants at generation 80: n/a (only {generations[-1]} generations)\n"
+        )
         summary_text = (
             f"Generations: {generations[-1]}\n"
             f"Final ants: {stats['total_ants'][-1]}\n"
             f"Queens: {stats['queen_count'][-1]}, Workers: {stats['worker_count'][-1]}\n"
             f"Reproducers: {stats['reproducer_count'][-1]}, Soldiers: {stats['soldier_count'][-1]}\n"
             f"Final occupancy: {stats['occupancy_ratio'][-1]:.2%}\n"
+            f"{iteration_80_text}"
             f"Detected scenario: {self.simulation.detect_scenario() or 'None'}"
         )
         fig.text(0.5, 0.02, summary_text, ha='center', fontsize=12)

@@ -156,6 +156,10 @@ Examples:
             final_scenario = sim.detect_scenario()
             log(f"Final ant count: {sim.grid.get_ant_count()}")
             log(f"Final occupancy: {sim.grid.get_occupancy_ratio():.2%}")
+            if len(sim.stats['generation']) >= 80:
+                log(f"Iteración 80: {sim.stats['total_ants'][79]} hormigas")
+            else:
+                log(f"Iteración 80: no disponible (solo {len(sim.stats['generation'])} iteraciones)")
             if final_scenario:
                 log(f"Detected scenario: {final_scenario}")
         

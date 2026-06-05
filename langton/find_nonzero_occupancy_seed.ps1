@@ -34,7 +34,7 @@ while ($true) {
 
     $processInfo = New-Object System.Diagnostics.ProcessStartInfo
     $processInfo.FileName = 'python'
-    $processInfo.Arguments = "main.py -s $seed -i 300"
+    $processInfo.Arguments = "main.py -s $seed -i 200"
     $processInfo.WorkingDirectory = $scriptDir # ◄--- FIJA EL DIRECTORIO DE TRABAJO AQUÍ
     $processInfo.RedirectStandardOutput = $true
     $processInfo.RedirectStandardError = $true
@@ -66,13 +66,13 @@ while ($true) {
             Write-Log $foundMessage $logFile
             Write-Log "➡ Final occupancy: $occupancy%" $logFile
 
-            $reportMessage = "Reejecutando con --report para generar el informe..."
+            $reportMessage = "Reejecutando con --report y --csv para generar el informe y las estadísticas..."
             Write-Host $reportMessage -ForegroundColor Cyan
             Write-Log $reportMessage $logFile
 
             $reportProcessInfo = New-Object System.Diagnostics.ProcessStartInfo
             $reportProcessInfo.FileName = 'python'
-            $reportProcessInfo.Arguments = "main.py -s $seed -i 300 --report"
+            $reportProcessInfo.Arguments = "main.py -s $seed -i 200 --report --csv"
             $reportProcessInfo.WorkingDirectory = $scriptDir # ◄--- Y AQUÍ TAMBIÉN
             $reportProcessInfo.RedirectStandardOutput = $true
             $reportProcessInfo.RedirectStandardError = $true
@@ -92,6 +92,54 @@ while ($true) {
                 Write-Host "ERROR en reporte:" -ForegroundColor Red
                 Write-Host $reportStderr
                 Write-Log "ERROR en reporte: $reportStderr" $logFile
+            }
+
+            $csvPath = $null
+            foreach ($line in ($reportStdout -split "`r?`n")) {
+                if ($line -match 'Statistics exported:\s*(.+\.csv)') {
+                    $csvPath = $matches[1].Trim()
+                    break
+                }
+            }
+
+            if (-not $csvPath) {
+                $csvDir = Join-Path $scriptDir 'output'
+                $csvFile = Get-ChildItem -Path $csvDir -Filter '*.csv' | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                if ($csvFile) {
+                    $csvPath = $csvFile.FullName
+                }
+            }
+
+            $entry80 = $null
+            $entry80Found = $false
+            foreach ($line in ($reportStdout -split "`r?`n")) {
+                if ($line -match 'Iteración 80:\s*([0-9]+)\s*hormigas') {
+                    $entry80 = [int]$matches[1]
+                    $entry80Found = $true
+                    break
+                }
+            }
+
+            if (-not $entry80Found -and $csvPath -and (Test-Path $csvPath)) {
+                $entry80Row = Import-Csv -Path $csvPath | Where-Object { [int]$_.generation -eq 80 } | Select-Object -First 1
+                if ($entry80Row) {
+                    $entry80 = [int]$entry80Row.total_ants
+                    $entry80Found = $true
+                }
+            }
+
+            if ($entry80Found) {
+                $entryMessage = "Iteración 80: $entry80 hormigas"
+                Write-Host $entryMessage -ForegroundColor Yellow
+                Write-Log $entryMessage $logFile
+            } elseif ($csvPath -and (Test-Path $csvPath)) {
+                $missingMessage = "No se encontró la generación 80 en el CSV: $csvPath"
+                Write-Host $missingMessage -ForegroundColor Yellow
+                Write-Log $missingMessage $logFile
+            } else {
+                $missingMessage = "No se pudo localizar el archivo CSV para extraer la generación 80."
+                Write-Host $missingMessage -ForegroundColor Yellow
+                Write-Log $missingMessage $logFile
             }
 
             break
