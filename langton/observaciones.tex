@@ -3,14 +3,27 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
 \usepackage[strings]{underscore}
 \usepackage{hyperref}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  breakatwhitespace=true,
+  columns=fullflexible,
+  showstringspaces=false,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape,
+  stringstyle=\color{blue}
+}
 
-\title{Reporte Hormgas de Langton}
+\title{Reporte Hormigas de Langton}
 \author{Eduardo Hernández Castro}
-\date{Clase Complex Sytems -- Profesor GENARO JUAREZ MARTINEZ -- Grupo 7CM4}
+\date{Complex Sytems -- GENARO JUAREZ MARTINEZ -- Grupo 7CM4}
 
 \begin{document}
 \maketitle
@@ -99,7 +112,6 @@ Según el código en \texttt{simulation.py} y los umbrales definidos en \texttt{
 \end{enumerate}
 
 \section{Resultados}
-En la carpeta \texttt{output} se generaron los resultados de las corridas estudiadas.
 
 \subsection{Caso 1 -- Seed 29976446, 100x100, 200 generaciones}
 \begin{itemize}
@@ -161,23 +173,44 @@ El log \texttt{output/logs/find_seed_20260605_074103.txt} confirma la búsqueda 
 La configuración inicial depende de la semilla aleatoria y del tamaño del grid. Al ser la grilla toroidal, dos tamaños de grid diferentes no pueden producir la misma configuración inicial válida, ya que la estructura de vecinos y la cantidad de celdas difieren.
 
 \section{Conclusiones}
-Las observaciones principales son:
-\begin{itemize}
-  \item La evolución del sistema depende fuertemente del grid elegido y de la semilla aleatoria.
-  \item Con un grid de 100x100 y 50\% de ocupación se generan 5000 hormigas iniciales, lo que da lugar a un espacio de estados iniciales extremadamente grande: elegir 5000 posiciones entre 10000 disponibles y asignar tipos de hormiga según proporciones de 1\%, 9\%, 35\% y 55\%.
-  \item Existe la posibilidad de que dos semillas diferentes produzcan el mismo estado inicial, pero solo si coinciden tanto las posiciones ocupadas como los tipos asignados. En la práctica, dado el gran número de combinaciones, esto es muy poco probable.
-  \item Los resultados de las pruebas muestran que, en estos casos, el sistema termina en aislamiento: la mayoría de las hormigas mueren y quedan 1 hormiga después de 200 o 250 generaciones.
-  \item La carpeta \texttt{output/logs} aporta evidencia del comportamiento en iteración 80 y de la ocupación final, confirmando la detección de aislamiento.
-  \item Se debe seguir investigando para encontrar configuraciones que mantengan hormigas vivas más allá de 250 generaciones y para comparar con los escenarios de sobrepoblación y estabilidad.
-\end{itemize}
+La evolución del sistema depende fuertemente de la semilla pseudoaleatoria usada para generar el estado inicial y de la incertidumbre inherente a respetar manualmente la ocupación y las proporciones de cada tipo de hormiga. En un grid de 100x100 con 50\% de ocupación, colocar a mano miles de hormigas manteniendo las proporciones de reinas, trabajadoras, reproductoras y soldados no es práctico, y por eso el estado inicial se construye aleatoriamente a partir de una semilla. Esto hace muy difícil encontrar un estado inicial ideal en el que, por ejemplo, varias reproductoras queden correctamente ubicadas alrededor de las reinas y puedan reproducirse cada pocas iteraciones.
 
-\section{Próximos pasos}
-\begin{itemize}
-  \item Analizar múltiples ejecuciones con semillas diferentes y comparar las trayectorias.
-  \item Comparar resultados de los escenarios de aislamiento, sobrepoblación y estabilidad.
-  \item Ajustar probabilidades de reproducción y densidades iniciales para evaluar su efecto en la supervivencia.
-  \item Agregar las imágenes de \texttt{test_run2} en el informe una vez que estén disponibles.
-  \item Registrar y comparar los resúmenes de los archivos \texttt{summary.txt} generados.
-\end{itemize}
+En los casos estudiados, incluso cuando una semilla produce más hormigas en la iteración 80, la ubicación de las hormigas que sobreviven más allá de las originales resulta decisiva. Las posiciones relativas de estas hormigas determinan si seguirán encontrándose con reproductoras y reinas, y por eso la diferencia entre los resultados de 200 iteraciones y 250 iteraciones no solo está en cuántas hormigas quedan, sino en cómo quedan distribuidas. Esto se aprecia en los archivos de salida \texttt{output/S401529739_G100_I250_O0.5_toroidal_20260605_075905.png} y \texttt{output/S29976446_G100_I200_O0.5_toroidal_20260605_074107.png}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{output/S401529739_G100_I250_O0.5_toroidal_20260605_075905.png}
+  \caption*{Caso 2: estado final en 250 generaciones}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{output/S29976446_G100_I200_O0.5_toroidal_20260605_074107.png}
+  \caption*{Caso 1: estado final en 200 generaciones}
+\end{figure}
+
+Otro efecto importante es que, en la mayoría de los casos, las hormigas nacidas después de la primera generación quedan demasiado separadas entre sí. Ese gran distanciamiento complica mucho que vuelvan a encontrarse más adelante, porque el movimiento de Langton tiende a dispersarlas y no a atraerlas. Por lo tanto, aunque haya un repunte en las generaciones intermedias, la distancia entre nacimientos reduce la probabilidad de que ocurran nuevos encuentros reproductivos y favorece la deriva hacia el aislamiento.
+
+Estas observaciones refuerzan que el sistema es sensible a la configuración inicial y que los estados verdaderamente estables o de sobrepoblación son difíciles de lograr con generación aleatoria simple. Para avanzar, sería necesario explorar estrategias que controlen mejor la ubicación inicial de los individuos clave (reinas y reproductoras) o que introduzcan mecanismos adicionales para mantener las hormigas en áreas de encuentro más frecuentes.
+
+\section{Anexos}
+En esta sección se incluyen los códigos completos de los módulos principales de la simulación.
+
+\subsection{Archivo \texttt{config.py}}
+\lstinputlisting[language=Python,caption={config.py}]{config.py}
+
+\subsection{Archivo \texttt{ant.py}}
+\lstinputlisting[language=Python,caption={ant.py}]{ant.py}
+
+\subsection{Archivo \texttt{grid.py}}
+\lstinputlisting[language=Python,caption={grid.py}]{grid.py}
+
+\subsection{Archivo \texttt{simulation.py}}
+\lstinputlisting[language=Python,caption={simulation.py}]{simulation.py}
+
+\subsection{Archivo \texttt{main.py}}
+\lstinputlisting[language=Python,caption={main.py}]{main.py}
+
+\subsection{Archivo \texttt{visualization.py}}
+\lstinputlisting[language=Python,caption={visualization.py}]{visualization.py}
 
 \end{document}
