@@ -1,0 +1,36 @@
+﻿Starting seed search session at 2026-06-05 07:41:03Z
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 200 iterations...
+Final ant count: 1
+Final occupancy: 0.01%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+
+âž¡ Seed encontrada: 29976446
+âž¡ Final occupancy: 0.01%
+Reejecutando con --report y --csv para generar el informe y las estadÃ­sticas...
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 200 iterations...
+Final ant count: 1
+Final occupancy: 0.01%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+Generating report...
+Report saved: output\S29976446_G100_I200_O0.5_toroidal_20260605_074107.png
+Initial grid snapshot saved: output\S29976446_G100_I200_O0.5_toroidal_20260605_074107_initial.png
+Final grid snapshot saved: output\S29976446_G100_I200_O0.5_toroidal_20260605_074107_final.png
+Summary exported: output\S29976446_G100_I200_O0.5_toroidal_20260605_074107_summary.txt
+Exporting statistics...
+Statistics exported: output\S29976446_G100_I200_O0.5_toroidal_20260605_074107.csv
+
+Done!
+
+IteraciÃ³n 80: 147 hormigas
+Script terminado. Log guardado en: C:\Users\taore\Downloads\Candle-2\Cellular Automata\Celullar-Automata\langton\output\logs\find_seed_20260605_074103.txt

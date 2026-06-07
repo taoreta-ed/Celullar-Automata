@@ -1,0 +1,4315 @@
+﻿Starting seed search session at 2026-06-05 07:41:53Z
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 179 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 175 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 158 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 192 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 194 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 169 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 159 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 169 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 133 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 190 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 160 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 150 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 191 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 171 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 155 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 126 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 188 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 124 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 127 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 148 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 155 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 197 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 163 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 171 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 170 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 140 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 213 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 182 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 159 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 157 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 161 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 188 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 127 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 157 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 218 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 139 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 157 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 136 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 174 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 176 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 209 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 139 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 218 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 158 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 148 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 179 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 119 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 155 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 155 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 195 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 138 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 140 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 221 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 199 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 184 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 176 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 162 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 135 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 245 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 175 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 178 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 177 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 190 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 184 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 188 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 177 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 133 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 199 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 131 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 204 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 169 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 162 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 121 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 150 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 200 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 175 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 139 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 123 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 142 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 175 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 154 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 197 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 182 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 138 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 168 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 200 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 194 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 196 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 158 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 106 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 124 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 153 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 136 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 180 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 184 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 116 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 139 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 182 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 139 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 158 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 199 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 182 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 181 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 143 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 133 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 117 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 177 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 161 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 154 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 187 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 191 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 143 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 179 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 137 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 137 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 169 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 169 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 133 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 162 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 142 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 137 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 186 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 170 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 141 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 126 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 177 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 158 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 134 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 203 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 161 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 171 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 160 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 184 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 176 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 154 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 141 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 160 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 173 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 168 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 150 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 211 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 153 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 164 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 164 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 163 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 142 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 171 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 197 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 173 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 121 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 201 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 181 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 159 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 203 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 170 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 164 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 173 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 210 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 157 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 191 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 160 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 188 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 140 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 148 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 169 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 157 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 208 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 141 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 159 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 197 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 178 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 155 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 209 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 199 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 203 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 201 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 164 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 137 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 139 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 150 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 143 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 175 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 173 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 141 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 210 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 212 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 153 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 222 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 162 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 180 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 187 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 201 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 204 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 131 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 208 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 143 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 154 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 152 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 120 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 179 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 132 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 140 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 164 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 124 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 181 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 137 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 167 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 177 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 173 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 136 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 130 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 193 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 176 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 235 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 206 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 149 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 160 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 141 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 162 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 155 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 143 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 173 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 171 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 121 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 176 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 158 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 127 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 143 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 164 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 175 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 119 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 190 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 155 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 143 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 198 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 144 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 205 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 191 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 179 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 197 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 162 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 124 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 135 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 142 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 184 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 148 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 150 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 145 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 128 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 163 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 116 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 139 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 156 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 163 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 146 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 149 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 148 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 147 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 207 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 163 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 164 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 185 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 149 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 168 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 173 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 153 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 162 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 138 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 168 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 151 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 124 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 166 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 157 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 169 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 187 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 178 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 165 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 140 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 189 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 163 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 172 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 0
+Final occupancy: 0.00%
+Iteraci¾n 80: 149 hormigas
+Detected scenario: isolation
+
+Done!
+
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 1
+Final occupancy: 0.01%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+
+Done!
+
+
+âž¡ Seed encontrada: 401529739
+âž¡ Final occupancy: 0.01%
+Reejecutando con --report y --csv para generar el informe y las estadÃ­sticas...
+Initialized grid 100x100
+Initial ants: 5000
+Occupancy: 50.00%
+Running simulation for 250 iterations...
+Final ant count: 1
+Final occupancy: 0.01%
+Iteraci¾n 80: 183 hormigas
+Detected scenario: isolation
+Generating report...
+Report saved: output\S401529739_G100_I250_O0.5_toroidal_20260605_075905.png
+Initial grid snapshot saved: output\S401529739_G100_I250_O0.5_toroidal_20260605_075905_initial.png
+Final grid snapshot saved: output\S401529739_G100_I250_O0.5_toroidal_20260605_075905_final.png
+Summary exported: output\S401529739_G100_I250_O0.5_toroidal_20260605_075905_summary.txt
+Exporting statistics...
+Statistics exported: output\S401529739_G100_I250_O0.5_toroidal_20260605_075905.csv
+
+Done!
+
+IteraciÃ³n 80: 183 hormigas
+Script terminado. Log guardado en: C:\Users\taore\Downloads\Candle-2\Cellular Automata\Celullar-Automata\langton\output\logs\find_seed_20260605_074153.txt

@@ -34,7 +34,7 @@ while ($true) {
 
     $processInfo = New-Object System.Diagnostics.ProcessStartInfo
     $processInfo.FileName = 'python'
-    $processInfo.Arguments = "main.py -s $seed -i 200"
+    $processInfo.Arguments = "main.py -s $seed -i 250"
     $processInfo.WorkingDirectory = $scriptDir # ◄--- FIJA EL DIRECTORIO DE TRABAJO AQUÍ
     $processInfo.RedirectStandardOutput = $true
     $processInfo.RedirectStandardError = $true
@@ -72,7 +72,7 @@ while ($true) {
 
             $reportProcessInfo = New-Object System.Diagnostics.ProcessStartInfo
             $reportProcessInfo.FileName = 'python'
-            $reportProcessInfo.Arguments = "main.py -s $seed -i 200 --report --csv"
+            $reportProcessInfo.Arguments = "main.py -s $seed -i 250 --report --csv"
             $reportProcessInfo.WorkingDirectory = $scriptDir # ◄--- Y AQUÍ TAMBIÉN
             $reportProcessInfo.RedirectStandardOutput = $true
             $reportProcessInfo.RedirectStandardError = $true

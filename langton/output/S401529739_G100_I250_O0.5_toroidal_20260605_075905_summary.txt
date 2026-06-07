@@ -1,0 +1,12 @@
+Langton Multi-Ant Simulation Summary
+=================================
+Run name: S401529739_G100_I250_O0.5_toroidal_20260605_075905
+Generations: 250
+Final total ants: 1
+Final queens: 0
+Final workers: 1
+Final reproducers: 0
+Final soldiers: 0
+Final occupancy ratio: 0.01%
+Ants at generation 80: 183
+Detected scenario: isolation
