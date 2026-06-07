@@ -1,15 +1,16 @@
-% Observaciones de la simulación de hormigas Langton
+% Reporte Hormgas de Langton
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage[strings]{underscore}
 \usepackage{hyperref}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
 
-\title{Observaciones de la simulación de hormigas}
-\author{Equipo de Desarrollo}
-\date{\today}
+\title{Reporte Hormgas de Langton}
+\author{Eduardo Hernández Castro}
+\date{Clase Complex Sytems -- Profesor GENARO JUAREZ MARTINEZ -- Grupo 7CM4}
 
 \begin{document}
 \maketitle
@@ -18,72 +19,68 @@
 En este documento se registran las observaciones y fundamentos técnicos de la simulación de hormigas basada en las reglas de Langton y el comportamiento de los distintos tipos de hormigas.
 
 \section{Fundamento del programa}
-La simulación está diseñada para evaluar cómo interactúan cuatro tipos de hormigas en una grilla con reglas de movimiento de Langton y ciclo de vida controlado.
+La simulación está diseñada para evaluar cómo interactúan cuatro tipos de hormigas en una grilla con reglas de movimiento de Langton y ciclo de vida controlado. Cada sección del código aporta una parte clave del modelo.
 
 \subsection{Reglas principales}
 \begin{itemize}
-  \item Cada hormiga vive hasta 80 iteraciones.
-  \item El estado de cada celda es negro/blanco, pero ese estado se maneja internamente y no se muestra en la visualización.
-  \item En celda negra la hormiga gira a la izquierda; en celda blanca gira a la derecha.
-  \item Después de girar, la hormiga invierte el color de la celda y avanza una celda.
-  \item Si la celda destino está ocupada, la hormiga prueba hasta tres direcciones alternativas de forma aleatoria.
-  \item Si todas las direcciones libres están ocupadas, la hormiga espera y no se mueve en esa iteración.
-  \item Una hormiga nueva nace cuando una reproductora y una reina se enfrentan en direcciones opuestas y se cumple la probabilidad de reproducción.
-  \item Se detectan escenarios de aislamiento, sobrepoblación y estabilidad con umbrales de población y ocupación.
+  \item Cada hormiga vive hasta 80 iteraciones. Esta regla se define en \texttt{config.py} mediante la constante \texttt{LIFESPAN} y se aplica en \texttt{simulation.py} durante la fase de envejecimiento y muerte.
+  \item El estado de cada celda es negro/blanco, pero ese estado se maneja internamente y no se muestra en la visualización. El estado oculto se representa en \texttt{grid.py} con el arreglo \texttt{cell_state}.
+  \item En celda negra la hormiga gira a la izquierda; en celda blanca gira a la derecha. Esta lógica está en \texttt{grid.py} dentro de la función \texttt{apply_langton_rule}.
+  \item Después de girar, la hormiga invierte el color de la celda y avanza una celda. El volteo de la celda se hace con \texttt{flip_cell_state} en \texttt{grid.py} y el movimiento con \texttt{move_ant} o \texttt{attempt_movement_with_collision}.
+  \item Si la celda destino está ocupada, la hormiga prueba hasta tres direcciones alternativas de forma aleatoria. Esta reintención se gestiona en \texttt{grid.py} dentro de \texttt{attempt_movement_with_collision}.
+  \item Si todas las direcciones libres están ocupadas, la hormiga espera y no se mueve en esa iteración. El ant permanece en su posición cuando \texttt{attempt_movement_with_collision} no encuentra destino libre.
+  \item Una hormiga nueva nace cuando una reproductora y una reina se enfrentan en direcciones opuestas y se cumple la probabilidad de reproducción. Esta interacción se evalúa en \texttt{simulation.py} durante la fase de reproducción, usando \texttt{REPRODUCTION_PROBABILITY} y \texttt{OPPOSITE_DIRECTIONS} desde \texttt{config.py}.
+  \item Se detectan escenarios de aislamiento, sobrepoblación y estabilidad con umbrales de población y ocupación. Estas condiciones se definen en \texttt{config.py} y se usan en \texttt{simulation.py} dentro de \texttt{detect_scenario}.
 \end{itemize}
 
 \section{Estructura del código}
 La aplicación está organizada en módulos claros que separan la lógica de configuración, el modelo de datos, la simulación y la visualización.
 
 \subsection{Configuración}
-El archivo \texttt{config.py} contiene:
+El archivo \texttt{config.py} contiene las constantes que determinan el comportamiento general:
 \begin{itemize}
-  \item proporciones iniciales de cada tipo de hormiga,
-  \item lifespan de 80 iteraciones,
-  \item probabilidades de reproducción y de muerte entre reinas,
-  \item umbrales para los tres escenarios detectados.
+  \item \texttt{GRID_SIZE}, \texttt{OCCUPANCY_RATIO} y \texttt{MAX_ANTS} para la dimensión y el número de hormigas iniciales.
+  \item \texttt{ANT_DENSITIES} para la distribución inicial de los tipos de hormiga: 1\% reinas, 55\% trabajadoras, 9\% reproductoras y 35\% soldados.
+  \item \texttt{LIFESPAN} define las 80 iteraciones de vida máxima de cada hormiga.
+  \item \texttt{REPRODUCTION_PROBABILITY} y \texttt{OPPOSITE_DIRECTIONS} controlan cuándo se puede generar una nueva hormiga.
+  \item \texttt{ISOLATION_THRESHOLD}, \texttt{OVERPOPULATION_GRID_THRESHOLD}, \texttt{OVERPOPULATION_DEATH_RATE}, \texttt{STABLE_POPULATION_VARIANCE} y \texttt{STABLE_GENERATIONS_REQUIRED} fijan los umbrales de escenario.
 \end{itemize}
 
 \subsection{Modelo de hormigas}
-El módulo \texttt{ant.py} define la clase base \texttt{Ant} y las subclases:
-\begin{itemize}
-  \item \texttt{Queen},
-  \item \texttt{Worker},
-  \item \texttt{Reproducer},
-  \item \texttt{Soldier}.
-\end{itemize}
-Cada hormiga mantiene su posición, dirección, edad y color para la visualización.
+El módulo \texttt{ant.py} define la clase base \texttt{Ant} y las subclases \texttt{Queen}, \texttt{Worker}, \texttt{Reproducer} y \texttt{Soldier}. Cada hormiga mantiene su posición, dirección, edad y color de visualización. El método \texttt{age_one_iteration()} incrementa la edad y \texttt{is_alive()} determina si la hormiga debe morir cuando supera la longevidad.
 
 \subsection{Grilla y reglas de Langton}
-El módulo \texttt{grid.py} implementa:
+El módulo \texttt{grid.py} implementa la grilla de ocupación y el estado oculto de las celdas. Los componentes más relevantes son:
 \begin{itemize}
-  \item la grilla de ocupación,
-  \item el estado oculto de las celdas (0 = negro, 1 = blanco),
-  \item el movimiento Langton con giro y volteo de color,
-  \item la colocación, movimiento y eliminación de hormigas,
-  \item la lógica de colisiones y reintentos.
+  \item \texttt{occupancy}: matriz booleana que indica qué celdas tienen hormigas.
+  \item \texttt{cell_state}: matriz de valores 0/1 que representa el color oculto de cada celda.
+  \item \texttt{apply_langton_rule}: aplica la regla de giro y calcula la nueva posición.
+  \item \texttt{flip_cell_state}: cambia el color de la celda actual después del giro.
+  \item \texttt{move_ant}: mueve la hormiga a una celda vacía.
+  \item \texttt{attempt_movement_with_collision}: gestiona choques y reintentos en hasta tres direcciones adicionales.
+  \item \texttt{get_occupancy_ratio}: calcula el porcentaje de celdas ocupadas por hormigas.
 \end{itemize}
 
 \subsection{Simulación}
-El módulo \texttt{simulation.py} coordina:
+El módulo \texttt{simulation.py} coordina la ejecución completa:
 \begin{itemize}
-  \item inicialización de la grilla con ocupación del 50\%,
-  \item ciclo de iteración: movimiento, reproducción, envejecimiento y muerte,
-  \item el manejo de nacimientos y encuentros de reinas,
-  \item el registro de estadísticas por generación.
+  \item \texttt{_initialize_ants}: crea la configuración inicial, asignando posiciones aleatorias y tipos de hormiga según \texttt{ANT_DENSITIES}.
+  \item \texttt{iterate}: ejecuta el ciclo de movimiento, reproducción, envejecimiento y muerte por generación.
+  \item \texttt{detect_scenario}: clasifica el estado actual como aislamiento, sobrepoblación o estabilidad.
+  \item \texttt{run}: itera el número especificado de generaciones.
+  \item Estadísticas por generación: total de hormigas, conteos por tipo, nacimientos, muertes, edad promedio y ocupación.
 \end{itemize}
 
 \subsection{Visualización y reporte}
-El módulo \texttt{visualization.py} genera:
+El módulo \texttt{visualization.py} produce la salida gráfica y los resúmenes:
 \begin{itemize}
-  \item animación en tiempo real si se usa \texttt{--visualize},
-  \item reporte final con gráficos de población y ocupación,
-  \item imágenes separadas del estado inicial y final,
-  \item resumen de resultados en un archivo de texto.
+  \item Gráficos de evolución poblacional y ocupación.
+  \item Guardado de imágenes iniciales y finales del grid.
+  \item Exportación de un archivo de resumen \texttt{summary.txt} con las métricas clave de cada corrida.
 \end{itemize}
 
 \subsection{Entrada principal}
-El archivo \texttt{main.py} expone el CLI con opciones para:
+El archivo \texttt{main.py} expone el CLI para ejecutar la simulación con parámetros ajustables:
 \begin{itemize}
   \item número de iteraciones,
   \item tamaño de la grilla,
@@ -94,31 +91,92 @@ El archivo \texttt{main.py} expone el CLI con opciones para:
 \end{itemize}
 
 \section{Escenarios}
-Se debe analizar y documentar los siguientes escenarios:
+Según el código en \texttt{simulation.py} y los umbrales definidos en \texttt{config.py}, los escenarios se clasifican así:
 \begin{enumerate}
-  \item Decesos por aislamiento
-  \item Decesos por sobrepoblación
-  \item Sistema estable
+  \item Aislamiento: ocurre cuando la población actual baja por debajo del 10\% de la población inicial. En nuestro caso, con 5000 hormigas iniciales, aislamiento se detecta si quedan menos de 500 hormigas.
+  \item Sobrepoblación: ocurre cuando la ocupación de la grilla excede 80\% y la tasa de muerte de la iteración es mayor al 15\%. Esto implica una saturación del espacio combinada con un aumento rápido de defunciones.
+  \item Sistema estable: ocurre cuando el total de hormigas se mantiene con una varianza relativa de 5\% o menos durante al menos 50 generaciones consecutivas.
 \end{enumerate}
 
-\section{Resultados iniciales}
-Aquí se incluyen los resultados de la primera ejecución, las métricas de población y las imágenes iniciales y finales.
+\section{Resultados}
+En la carpeta \texttt{output} se generaron los resultados de las corridas estudiadas.
 
-\section{Discusión}
-\subsection{Colisiones}
-La colisión se maneja mediante el reintento en otras tres direcciones cuando la celda destino está ocupada. Si todas las direcciones están ocupadas, la hormiga permanece en su sitio y la iteración termina para ella.
+\subsection{Caso 1 -- Seed 29976446, 100x100, 200 generaciones}
+\begin{itemize}
+  \item Archivo de resumen: \texttt{S29976446_G100_I200_O0.5_toroidal_20260605_074107_summary.txt}
+  \item Generaciones: 200
+  \item Hormigas finales: 1 (soldado)
+  \item Ocupación final: 0.01\%
+  \item Hormigas en generación 80: 147
+  \item Escenario detectado: aislamiento
+\end{itemize}
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_initial.png}
+    \caption*{Caso 1: estado inicial}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_final.png}
+    \caption*{Caso 1: estado final}
+  \end{minipage}
+\end{figure}
 
-\subsection{Nacimiento}
-Cuando una reina y una reproductora se encuentran en direcciones opuestas, el programa selecciona una celda libre adyacente para crear la nueva hormiga. Si existe una posición adyacente compartida entre ambos, esa posición tiene prioridad.
+\subsection{Caso 2 -- Seed 401529739, 100x100, 250 generaciones}
+\begin{itemize}
+  \item Archivo de resumen: \texttt{S401529739_G100_I250_O0.5_toroidal_20260605_075905_summary.txt}
+  \item Generaciones: 250
+  \item Hormigas finales: 1 (trabajadora)
+  \item Ocupación final: 0.01\%
+  \item Hormigas en generación 80: 183
+  \item Escenario detectado: aislamiento
+\end{itemize}
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_initial.png}
+    \caption*{Caso 2: estado inicial}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_final.png}
+    \caption*{Caso 2: estado final}
+  \end{minipage}
+\end{figure}
+
+\subsection{Notas de terminal y logs}
+El log \texttt{output/logs/find_seed_20260605_074103.txt} confirma la búsqueda de semilla y los resultados:
+\begin{itemize}
+  \item Grid inicial 100x100 con 5000 hormigas y 50\% de ocupación.
+  \item Al finalizar 200 iteraciones quedó 1 hormiga y 0.01\% de ocupación.
+  \item En iteración 80 se tenía 147 hormigas.
+\end{itemize}
+
+\subsection{Dependencia de la semilla y el tamaño del grid}
+La configuración inicial depende de la semilla aleatoria y del tamaño del grid. Al ser la grilla toroidal, dos tamaños de grid diferentes no pueden producir la misma configuración inicial válida, ya que la estructura de vecinos y la cantidad de celdas difieren.
 
 \section{Conclusiones}
-Documentar el comportamiento observado y las decisiones de ajuste de parámetros para estabilizar el sistema.
+Las observaciones principales son:
+\begin{itemize}
+  \item La evolución del sistema depende fuertemente del grid elegido y de la semilla aleatoria.
+  \item Con un grid de 100x100 y 50\% de ocupación se generan 5000 hormigas iniciales, lo que da lugar a un espacio de estados iniciales extremadamente grande: elegir 5000 posiciones entre 10000 disponibles y asignar tipos de hormiga según proporciones de 1\%, 9\%, 35\% y 55\%.
+  \item Existe la posibilidad de que dos semillas diferentes produzcan el mismo estado inicial, pero solo si coinciden tanto las posiciones ocupadas como los tipos asignados. En la práctica, dado el gran número de combinaciones, esto es muy poco probable.
+  \item Los resultados de las pruebas muestran que, en estos casos, el sistema termina en aislamiento: la mayoría de las hormigas mueren y quedan 1 hormiga después de 200 o 250 generaciones.
+  \item La carpeta \texttt{output/logs} aporta evidencia del comportamiento en iteración 80 y de la ocupación final, confirmando la detección de aislamiento.
+  \item Se debe seguir investigando para encontrar configuraciones que mantengan hormigas vivas más allá de 250 generaciones y para comparar con los escenarios de sobrepoblación y estabilidad.
+\end{itemize}
 
 \section{Próximos pasos}
 \begin{itemize}
-  \item Analizar múltiples ejecuciones con semillas diferentes.
-  \item Comparar los resultados de los tres escenarios.
-  \item Ajustar las probabilidades y densidades para lograr estabilidad.
+  \item Analizar múltiples ejecuciones con semillas diferentes y comparar las trayectorias.
+  \item Comparar resultados de los escenarios de aislamiento, sobrepoblación y estabilidad.
+  \item Ajustar probabilidades de reproducción y densidades iniciales para evaluar su efecto en la supervivencia.
+  \item Agregar las imágenes de \texttt{test_run2} en el informe una vez que estén disponibles.
   \item Registrar y comparar los resúmenes de los archivos \texttt{summary.txt} generados.
 \end{itemize}
 

@@ -15,6 +15,11 @@
         "/^cd \"c:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; python main\\.py -s 1 -i 300 --report --csv --output-dir output/test_run2$/": {
             "approve": true,
             "matchCommandLine": true
-        }
+        },
+        "/^cd \"C:\\\\Users\\\\taore\\\\Downloads\\\\Candle-2\\\\Cellular Automata\\\\Celullar-Automata\\\\langton\"; latexmk -xelatex -file-line-error -interaction=nonstopmode -synctex=1 observaciones\\.tex$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "latexmk": true
     }
 }

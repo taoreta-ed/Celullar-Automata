@@ -1,8 +1,8 @@
-PWD c:/Users/taore/Downloads/Candle-2/Cellular Automata/Celullar-Automata/langton
+PWD C:/Users/taore/Downloads/Candle-2/Cellular Automata/Celullar-Automata/langton
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt
-INPUT c:/Users/taore/Downloads/Candle-2/Cellular Automata/Celullar-Automata/langton/observaciones.tex
+INPUT observaciones.tex
 OUTPUT observaciones.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -32,6 +32,10 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
 INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
 INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
+INPUT c:/texlive/2026/texmf-dist/tex/latex/underscore/underscore.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/underscore/underscore.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/firstaid/underscore-ltx.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/firstaid/underscore-ltx.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
@@ -115,6 +119,18 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 OUTPUT observaciones.xdv
+INPUT ./output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_initial.png
+INPUT ./output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_initial.png
+INPUT ./output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_initial.png
+INPUT ./output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_final.png
+INPUT ./output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_final.png
+INPUT ./output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_final.png
+INPUT ./output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_initial.png
+INPUT ./output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_initial.png
+INPUT ./output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_initial.png
+INPUT ./output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_final.png
+INPUT ./output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_final.png
+INPUT ./output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_final.png
 INPUT observaciones.aux
 INPUT ./observaciones.out
 INPUT ./observaciones.out

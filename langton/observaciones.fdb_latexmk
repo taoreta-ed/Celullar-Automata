@@ -1,11 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1780599927.77264 "observaciones.xdv" "observaciones.pdf" "observaciones" 1780599928.72301 0
-  "observaciones.xdv" 1780599927 11364 5231a33eb6330cdeceedbce14da5544b "xelatex"
+["xdvipdfmx"] 1780856957.95789 "observaciones.xdv" "observaciones.pdf" "observaciones" 1780856958.90825 0
+  "observaciones.xdv" 1780856957 20196 2508b0e32a53e98bd9ea60a0e4fcac38 "xelatex"
   (generated)
   "observaciones.pdf"
   (rewritten before read)
-["xelatex"] 1780599926.79946 "c:/Users/taore/Downloads/Candle-2/Cellular Automata/Celullar-Automata/langton/observaciones.tex" "observaciones.xdv" "observaciones" 1780599928.72006 0
-  "c:/Users/taore/Downloads/Candle-2/Cellular Automata/Celullar-Automata/langton/observaciones.tex" 1780599923 5420 a4e86f422cad362dca44e3497dc18c86 ""
+["xelatex"] 1780856956.46136 "observaciones.tex" "observaciones.xdv" "observaciones" 1780856958.90593 0
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1779391058 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1779397912 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1779389514 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -34,6 +33,7 @@
   "c:/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty" 1779392667 5048 0270515b828149155424600fd2d58ac5 ""
   "c:/texlive/2026/texmf-dist/tex/latex/base/size12.clo" 1779392667 8449 8dc66c6c313c8eb2d774af83bca435dd ""
   "c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1779390660 46885 8953c67ffba03252c6090aa19568b8ba ""
+  "c:/texlive/2026/texmf-dist/tex/latex/firstaid/underscore-ltx.sty" 1779390947 1901 6c715cc8da6122334c161db78030bc2b ""
   "c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty" 1779391285 41904 7711079366884e0d15963c9d40019853 ""
   "c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1779391715 1224 978390e9c2234eab29404bc21b268d1e ""
   "c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def" 1779391716 14788 68cddb076430acc268ef4203b6523355 ""
@@ -54,13 +54,18 @@
   "c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd" 1779393028 2682 555da1faa2e266801e4b221d01a42cb5 ""
   "c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty" 1779395587 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1779395625 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
+  "c:/texlive/2026/texmf-dist/tex/latex/underscore/underscore.sty" 1779397308 10722 1e2a550b7f07af2b195b71b3fc7bf3ff ""
   "c:/texlive/2026/texmf-dist/tex/latex/url/url.sty" 1779397406 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "c:/texlive/2026/texmf-dist/web2c/texmf.cnf" 1779387993 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "c:/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1779398246 5956699 d3a50e4f17464d77d48340f0f28983f0 ""
   "c:/texlive/2026/texmf.cnf" 1779397975 713 614551405fc44b98efbf516466e3c909 ""
-  "observaciones.aux" 1780599927 2140 a6e368be8e0ffd064e8d65dd544612f3 "xelatex"
-  "observaciones.out" 1780599927 2264 f9ff6bdf54b9a330c7d5242c4fe5f6ef "xelatex"
-  "observaciones.tex" 1780599923 5420 a4e86f422cad362dca44e3497dc18c86 ""
+  "observaciones.aux" 1780856957 2856 5e8ef605e26c4e7b891b2ec93a25910c "xelatex"
+  "observaciones.out" 1780856957 3067 d3a48fbd5277ef51cf510cac1e29a0a5 "xelatex"
+  "observaciones.tex" 1780856934 11880 00da33ad62feeb3f07264b8ca09ce54d ""
+  "output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_final.png" 1780666871 417 e286b944088c92d23133a06497bed2c6 ""
+  "output/S29976446_G100_I200_O0.5_toroidal_20260605_074107_initial.png" 1780666871 4615 b8fb340370e010183936347b830c33d8 ""
+  "output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_final.png" 1780667947 419 f626712fdc2f1458658946208791b89c ""
+  "output/S401529739_G100_I250_O0.5_toroidal_20260605_075905_initial.png" 1780667947 4403 af2df8470548b3bf2cbc4b90358f3fa7 ""
   (generated)
   "observaciones.aux"
   "observaciones.log"
